@@ -8,6 +8,11 @@
 
 Built in one day at the *Reinvent the Wheel* hackathon, 17 October 2026.
 
+> **About this fork.** This is Leo Aarons-Ditson's copy of the hackathon build. The canonical repo and
+> releases live at [hymanimy/isabelle-revamp](https://github.com/hymanimy/isabelle-revamp) (branch `leo`
+> is this work). Implementation by Leo; concept with Alex Hyman. The VS Code extension, the proof graph
+> and the MCP bridge in `extension/` and `mcp/` are the parts to read.
+
 Lean is the only proof assistant with first-class editor and AI tooling. Isabelle has a
 different type theory, a twenty-year library (the Archive of Formal Proofs) and the most
 readable proof language there is, Isar; what it lacks is a modern front end. This project

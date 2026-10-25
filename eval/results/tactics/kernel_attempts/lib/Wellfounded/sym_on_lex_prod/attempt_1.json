@@ -1,0 +1,23 @@
+{
+  "result": {
+    "proof_text": "by simp",
+    "aux_lemmas": "",
+    "proved": true,
+    "failure_class": null,
+    "error": "",
+    "kernel_wall_s": 7.977730500002508,
+    "kernel": {
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0d4udwl4/E_7e4f9bf56a.thy\"):\ntheorem\n  local.sym_on_lex_prod:\n    \\<lbrakk>sym_on ?A ?r\\<^sub>A; sym_on ?B ?r\\<^sub>B\\<rbrakk> \\<Longrightarrow> sym_on (?A \\<times> ?B) (?r\\<^sub>A <*lex*> ?r\\<^sub>B)\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "errors": [],
+      "wall_s": 7.977730500002508,
+      "timed_out": false
+    }
+  },
+  "tactic": "by simp",
+  "attempt": 1,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

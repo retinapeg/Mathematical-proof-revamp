@@ -1,0 +1,69 @@
+{
+  "result": {
+    "proof_text": "by blast",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):\nFailed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):\ngoal (1 subgoal):\n 1. gcd a b \\<noteq> 0\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. gcd a b ≠\n    0\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.562478542007739,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):\n*** goal (1 subgoal):\n***  1. gcd a b \\<noteq> 0\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):\ntheorem common_nonzero:\n 0 < gcd ?a ?b \\<and>\n ?a = gcd ?a ?b * (?a div gcd ?a ?b) \\<and>\n ?b = gcd ?a ?b * (?b div gcd ?a ?b) \\<and>\n coprime (?a div gcd ?a ?b) (?b div gcd ?a ?b) \\<Longrightarrow>\n gcd ?a ?b \\<noteq> 0\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):\n*** goal (1 subgoal):\n***  1. gcd a b ≠\n***     0\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. gcd a b \\<noteq> 0"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. gcd a b ≠"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    0"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bmwdt80i/E_58e1eb25e2.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.562478542007739,
+      "timed_out": false
+    }
+  },
+  "tactic": "by blast",
+  "attempt": 3,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

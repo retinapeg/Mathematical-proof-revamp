@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by fastforce",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):\nFailed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):\ngoal (1 subgoal):\n 1. prod f A ^ n = (\\<Prod>x\\<in>A. f x ^ n)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. prod f A ^ n =\n    (∏x∈A.\n       f x ^\n       n)\nAt command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.938029375000042,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):\ntheorem local.prod_power_distrib: prod ?f ?A ^ ?n = (\\<Prod>x\\<in>?A. ?f x ^ ?n)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):\n*** goal (1 subgoal):\n***  1. prod f A ^ n = (\\<Prod>x\\<in>A. f x ^ n)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):\n*** goal (1 subgoal):\n***  1. prod f A ^ n =\n***     (∏x∈A.\n***        f x ^\n***        n)\n*** At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. prod f A ^ n = (\\<Prod>x\\<in>A. f x ^ n)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. prod f A ^ n ="
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "    (∏x∈A."
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       f x ^"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       n)"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_wrljwaje/E_f684fc1d0c.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.938029375000042,
+      "timed_out": false
+    }
+  },
+  "tactic": "by fastforce",
+  "attempt": 4,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

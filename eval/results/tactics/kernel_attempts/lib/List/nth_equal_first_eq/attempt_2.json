@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):\nFailed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):\ngoal (1 subgoal):\n 1. (x # xs) ! n = x \\<Longrightarrow> n = 0\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. (x # xs) ! n = x ⟹\n    n =\n    0\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.395597082999302,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):\ntheorem nth_equal_first_eq:\n \\<lbrakk>?x \\<notin> set ?xs; ?n \\<le> length ?xs\\<rbrakk> \\<Longrightarrow> ((?x # ?xs) ! ?n = ?x) = (?n = 0)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):\n*** Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):\n*** goal (1 subgoal):\n***  1. (x # xs) ! n = x \\<Longrightarrow> n = 0\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):\n*** goal (1 subgoal):\n***  1. (x # xs) ! n = x ⟹\n***     n =\n***     0\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. (x # xs) ! n = x \\<Longrightarrow> n = 0"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. (x # xs) ! n = x ⟹"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    n ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    0"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3i3l4sq9/E_fd4fb60f14.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.395597082999302,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

@@ -1,0 +1,23 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": true,
+    "failure_class": null,
+    "error": "",
+    "kernel_wall_s": 7.455468832995393,
+    "kernel": {
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nWarning (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rom_mmhb/E_fabca1a682.thy\"):\n### Ignoring duplicate rewrite rule:\n### 1 = ?m1 * ?n1 \\<equiv> ?m1 = 1 \\<and> ?n1 = 1\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rom_mmhb/E_fabca1a682.thy\"):\ntheorem local.nat_mult_eq_1_iff: (?m * ?n = 1) = (?m = 1 \\<and> ?n = 1)\n  and local.nat_1_eq_mult_iff: (1 = ?m * ?n) = (?m = 1 \\<and> ?n = 1)\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "errors": [],
+      "wall_s": 7.455468832995393,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

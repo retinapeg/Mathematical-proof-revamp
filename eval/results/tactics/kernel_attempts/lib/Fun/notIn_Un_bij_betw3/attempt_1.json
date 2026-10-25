@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by simp",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):\nFailed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):\ngoal (1 subgoal):\n 1. bij_betw f A A' = bij_betw f (insert b A) (insert (f b) A')\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. bij_betw f A A' =\n    bij_betw f (insert b A)\n     (insert (f b)\n       A')\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.387541957999929,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):\ntheorem notIn_Un_bij_betw3:\n \\<lbrakk>?b \\<notin> ?A; ?f ?b \\<notin> ?A'\\<rbrakk>\n \\<Longrightarrow> bij_betw ?f ?A ?A' = bij_betw ?f (?A \\<union> {?b}) (?A' \\<union> {?f ?b})\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):\n*** Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):\n*** goal (1 subgoal):\n***  1. bij_betw f A A' = bij_betw f (insert b A) (insert (f b) A')\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):\n*** goal (1 subgoal):\n***  1. bij_betw f A A' =\n***     bij_betw f (insert b A)\n***      (insert (f b)\n***        A')\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. bij_betw f A A' = bij_betw f (insert b A) (insert (f b) A')"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. bij_betw f A A' ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    bij_betw f (insert b A)"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "     (insert (f b)"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       A')"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_8i2fza0i/E_7d0f3f5716.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.387541957999929,
+      "timed_out": false
+    }
+  },
+  "tactic": "by simp",
+  "attempt": 1,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

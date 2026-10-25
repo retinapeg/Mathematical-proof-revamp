@@ -1,0 +1,99 @@
+{
+  "result": {
+    "proof_text": "by arith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):\nFailed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):\ngoal (1 subgoal):\n 1. (insert (a, b) r)\\<^sup>+ =\n    r\\<^sup>+ \\<union> {(x, y). ((x, a) \\<in> r\\<^sup>+ \\<or> x = a) \\<and> ((b, y) \\<in> r\\<^sup>+ \\<or> y = b)}\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. (insert (a, b) r)⇧+ =\n    r⇧+ ∪\n    {(x, y).\n     ((x, a) ∈ r⇧+ ∨ x = a) ∧\n     ((b, y) ∈ r⇧+ ∨\n      y =\n      b)}\nAt command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.486094541003695,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):\ntheorem\n  local.trancl_insert2:\n    (insert (?a, ?b) ?r)\\<^sup>+ =\n    ?r\\<^sup>+ \\<union> {(x, y). ((x, ?a) \\<in> ?r\\<^sup>+ \\<or> x = ?a) \\<and> ((?b, y) \\<in> ?r\\<^sup>+ \\<or> y = ?b)}\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):\n*** goal (1 subgoal):\n***  1. (insert (a, b) r)\\<^sup>+ =\n***     r\\<^sup>+ \\<union> {(x, y). ((x, a) \\<in> r\\<^sup>+ \\<or> x = a) \\<and> ((b, y) \\<in> r\\<^sup>+ \\<or> y = b)}\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):\n*** goal (1 subgoal):\n***  1. (insert (a, b) r)⇧+ =\n***     r⇧+ ∪\n***     {(x, y).\n***      ((x, a) ∈ r⇧+ ∨ x = a) ∧\n***      ((b, y) ∈ r⇧+ ∨\n***       y =\n***       b)}\n*** At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. (insert (a, b) r)\\<^sup>+ ="
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "    r\\<^sup>+ \\<union> {(x, y). ((x, a) \\<in> r\\<^sup>+ \\<or> x = a) \\<and> ((b, y) \\<in> r\\<^sup>+ \\<or> y = b)}"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. (insert (a, b) r)⇧+ ="
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "    r⇧+ ∪"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "    {(x, y)."
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "     ((x, a) ∈ r⇧+ ∨ x = a) ∧"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "     ((b, y) ∈ r⇧+ ∨"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "      y ="
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "      b)}"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_rb86woxe/E_5163dffdfa.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.486094541003695,
+      "timed_out": false
+    }
+  },
+  "tactic": "by arith",
+  "attempt": 7,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

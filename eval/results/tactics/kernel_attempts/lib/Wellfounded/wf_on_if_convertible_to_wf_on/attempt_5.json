@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by force",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):\ngoal (1 subgoal):\n 1. \\<lbrakk>wf_on (f ` A) Q; \\<And>x y. \\<lbrakk>x \\<in> A; y \\<in> A; (x, y) \\<in> R\\<rbrakk> \\<Longrightarrow> (f x, f y) \\<in> Q\\<rbrakk>\n    \\<Longrightarrow> wf_on A R\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦wf_on (f ` A) Q; ⋀x y. ⟦x ∈ A; y ∈ A; (x, y) ∈ R⟧ ⟹ (f x, f y) ∈ Q⟧\n    ⟹ wf_on A\n        R\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.705085958004929,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):\ntheorem\n  local.wf_on_if_convertible_to_wf_on:\n    \\<lbrakk>wf_on (?f ` ?A) ?Q;\n     \\<And>x y. \\<lbrakk>x \\<in> ?A; y \\<in> ?A; (x, y) \\<in> ?R\\<rbrakk> \\<Longrightarrow> (?f x, ?f y) \\<in> ?Q\\<rbrakk>\n    \\<Longrightarrow> wf_on ?A ?R\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):\n*** goal (1 subgoal):\n***  1. \\<lbrakk>wf_on (f ` A) Q; \\<And>x y. \\<lbrakk>x \\<in> A; y \\<in> A; (x, y) \\<in> R\\<rbrakk> \\<Longrightarrow> (f x, f y) \\<in> Q\\<rbrakk>\n***     \\<Longrightarrow> wf_on A R\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):\n*** goal (1 subgoal):\n***  1. ⟦wf_on (f ` A) Q; ⋀x y. ⟦x ∈ A; y ∈ A; (x, y) ∈ R⟧ ⟹ (f x, f y) ∈ Q⟧\n***     ⟹ wf_on A\n***         R\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. \\<lbrakk>wf_on (f ` A) Q; \\<And>x y. \\<lbrakk>x \\<in> A; y \\<in> A; (x, y) \\<in> R\\<rbrakk> \\<Longrightarrow> (f x, f y) \\<in> Q\\<rbrakk>"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    \\<Longrightarrow> wf_on A R"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. ⟦wf_on (f ` A) Q; ⋀x y. ⟦x ∈ A; y ∈ A; (x, y) ∈ R⟧ ⟹ (f x, f y) ∈ Q⟧"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    ⟹ wf_on A"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "        R"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0lw8im26/E_485b31e520.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.705085958004929,
+      "timed_out": false
+    }
+  },
+  "tactic": "by force",
+  "attempt": 5,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

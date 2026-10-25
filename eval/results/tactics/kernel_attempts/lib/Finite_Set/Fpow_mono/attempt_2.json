@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):\nFailed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):\ngoal (1 subgoal):\n 1. \\<And>x. \\<lbrakk>A \\<subseteq> B; x \\<in> Fpow A\\<rbrakk> \\<Longrightarrow> x \\<in> Fpow B\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⋀x. ⟦A ⊆ B; x ∈ Fpow A⟧\n        ⟹ x ∈ Fpow\n                B\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.215169875009451,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):\ntheorem local.Fpow_mono: ?A \\<subseteq> ?B \\<Longrightarrow> Fpow ?A \\<subseteq> Fpow ?B\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):\n*** goal (1 subgoal):\n***  1. \\<And>x. \\<lbrakk>A \\<subseteq> B; x \\<in> Fpow A\\<rbrakk> \\<Longrightarrow> x \\<in> Fpow B\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):\n*** goal (1 subgoal):\n***  1. ⋀x. ⟦A ⊆ B; x ∈ Fpow A⟧\n***         ⟹ x ∈ Fpow\n***                 B\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. \\<And>x. \\<lbrakk>A \\<subseteq> B; x \\<in> Fpow A\\<rbrakk> \\<Longrightarrow> x \\<in> Fpow B"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. ⋀x. ⟦A ⊆ B; x ∈ Fpow A⟧"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "        ⟹ x ∈ Fpow"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "                B"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_851fvpfi/E_d6429f3a79.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.215169875009451,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

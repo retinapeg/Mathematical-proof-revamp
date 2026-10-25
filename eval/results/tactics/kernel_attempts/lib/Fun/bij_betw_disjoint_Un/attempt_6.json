@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by linarith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):\nFailed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):\ngoal (1 subgoal):\n 1. bij_betw (\\<lambda>x. if x \\<in> A then f x else g x) (A \\<union> B) (C \\<union> D)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. bij_betw (λx. if x ∈ A then f x else g x) (A ∪ B)\n     (C ∪\n      D)\nAt command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.28360441699624,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):\ntheorem bij_betw_disjoint_Un:\n \\<lbrakk>bij_betw ?f ?A ?C; bij_betw ?g ?B ?D; ?A \\<inter> ?B = {}; ?C \\<inter> ?D = {}\\<rbrakk>\n \\<Longrightarrow> bij_betw (\\<lambda>x. if x \\<in> ?A then ?f x else ?g x) (?A \\<union> ?B) (?C \\<union> ?D)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):\n*** Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):\n*** goal (1 subgoal):\n***  1. bij_betw (\\<lambda>x. if x \\<in> A then f x else g x) (A \\<union> B) (C \\<union> D)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):\n*** goal (1 subgoal):\n***  1. bij_betw (λx. if x ∈ A then f x else g x) (A ∪ B)\n***      (C ∪\n***       D)\n*** At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. bij_betw (\\<lambda>x. if x \\<in> A then f x else g x) (A \\<union> B) (C \\<union> D)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. bij_betw (λx. if x ∈ A then f x else g x) (A ∪ B)"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "     (C ∪"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "      D)"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_c1ffla7g/E_3230879608.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.28360441699624,
+      "timed_out": false
+    }
+  },
+  "tactic": "by linarith",
+  "attempt": 6,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

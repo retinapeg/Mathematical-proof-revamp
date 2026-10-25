@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by linarith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):\nFailed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):\ngoal (1 subgoal):\n 1. ((x # xs) ! n = x) = (n = 0)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ((x # xs) ! n = x) =\n    (n =\n     0)\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.070189249992836,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):\n*** goal (1 subgoal):\n***  1. ((x # xs) ! n = x) = (n = 0)\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):\ntheorem nth_equal_first_eq:\n \\<lbrakk>?x \\<notin> set ?xs; ?n \\<le> length ?xs\\<rbrakk> \\<Longrightarrow> ((?x # ?xs) ! ?n = ?x) = (?n = 0)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):\n*** goal (1 subgoal):\n***  1. ((x # xs) ! n = x) =\n***     (n =\n***      0)\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. ((x # xs) ! n = x) = (n = 0)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. ((x # xs) ! n = x) ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    (n ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "     0)"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_3xdjwdg9/E_b7030be77f.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.070189249992836,
+      "timed_out": false
+    }
+  },
+  "tactic": "by linarith",
+  "attempt": 6,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

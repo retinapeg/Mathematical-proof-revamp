@@ -1,0 +1,69 @@
+{
+  "result": {
+    "proof_text": "by blast",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):\nFailed to apply initial proof method (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):\ngoal (1 subgoal):\n 1. P (lcm x y)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. P (lcm x\n        y)\nAt command \"by\" (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.545552374998806,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):\n*** Failed to apply initial proof method (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):\n*** goal (1 subgoal):\n***  1. P (lcm x y)\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):\ntheorem lcm_cases_int:\n \\<lbrakk>\\<lbrakk>0 \\<le> ?x; 0 \\<le> ?y\\<rbrakk> \\<Longrightarrow> ?P (lcm ?x ?y);\n  \\<lbrakk>0 \\<le> ?x; ?y \\<le> 0\\<rbrakk> \\<Longrightarrow> ?P (lcm ?x (- ?y));\n  \\<lbrakk>?x \\<le> 0; 0 \\<le> ?y\\<rbrakk> \\<Longrightarrow> ?P (lcm (- ?x) ?y);\n  \\<lbrakk>?x \\<le> 0; ?y \\<le> 0\\<rbrakk> \\<Longrightarrow> ?P (lcm (- ?x) (- ?y))\\<rbrakk>\n \\<Longrightarrow> ?P (lcm ?x ?y)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):\n*** goal (1 subgoal):\n***  1. P (lcm x\n***         y)\n*** At command \"by\" (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\"):"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 1. P (lcm x y)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 1. P (lcm x"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "        y)"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "At command \"by\" (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d5w4vbvh/E_e8e54047f1.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.545552374998806,
+      "timed_out": false
+    }
+  },
+  "tactic": "by blast",
+  "attempt": 3,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

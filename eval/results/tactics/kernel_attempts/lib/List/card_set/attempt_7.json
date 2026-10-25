@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by arith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):\nFailed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):\ngoal (1 subgoal):\n 1. card (set xs) = length (remdups xs)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. card (set xs) =\n    length\n     (remdups\n       xs)\nAt command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.28335891700408,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):\ntheorem local.card_set: card (set ?xs) = length (remdups ?xs)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):\n*** goal (1 subgoal):\n***  1. card (set xs) = length (remdups xs)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):\n*** goal (1 subgoal):\n***  1. card (set xs) =\n***     length\n***      (remdups\n***        xs)\n*** At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. card (set xs) = length (remdups xs)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. card (set xs) ="
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "    length"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "     (remdups"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       xs)"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_kkfbbhiu/E_dba0449b88.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.28335891700408,
+      "timed_out": false
+    }
+  },
+  "tactic": "by arith",
+  "attempt": 7,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

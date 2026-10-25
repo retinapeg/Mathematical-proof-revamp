@@ -1,0 +1,59 @@
+{
+  "result": {
+    "proof_text": "by linarith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):\nFailed to apply initial proof method (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):\ngoal (1 subgoal):\n 1. P a b\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\nAt command \"by\" (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.319268959006877,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):\ntheorem Euclid_induct:\n \\<lbrakk>\\<And>a b. ?P a b = ?P b a; \\<And>a. ?P a 0; \\<And>a b. ?P a b \\<longrightarrow> ?P a (a + b)\\<rbrakk>\n \\<Longrightarrow> ?P ?a ?b\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):\n*** Failed to apply initial proof method (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):\n*** goal (1 subgoal):\n***  1. P a b\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):\n*** goal (1 subgoal):\n***  1. P a b\n*** At command \"by\" (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\"):"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": " 1. P a b"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "At command \"by\" (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_62fsn6kb/E_775e18302d.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.319268959006877,
+      "timed_out": false
+    }
+  },
+  "tactic": "by linarith",
+  "attempt": 6,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

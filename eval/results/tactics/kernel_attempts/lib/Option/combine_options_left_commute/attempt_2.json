@@ -1,0 +1,94 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):\nFailed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):\ngoal (1 subgoal):\n 1. \\<lbrakk>\\<And>x y. f x y = f y x; \\<And>x y z. f z (f x y) = f x (f y z)\\<rbrakk>\n    \\<Longrightarrow> combine_options f y (combine_options f x z) =\n       combine_options f x (combine_options f y z)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦⋀x y. f x y = f y x; ⋀x y z. f z (f x y) = f x (f y z)⟧\n    ⟹ combine_options f y (combine_options f x z) =\n       combine_options f x\n        (combine_options f y\n          z)\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.753906583006028,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):\ntheorem\n  local.combine_options_left_commute:\n    \\<lbrakk>\\<And>x y. ?f x y = ?f y x; \\<And>x y z. ?f (?f x y) z = ?f x (?f y z)\\<rbrakk>\n    \\<Longrightarrow> combine_options ?f ?y (combine_options ?f ?x ?z) =\n       combine_options ?f ?x (combine_options ?f ?y ?z)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):\n*** Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):\n*** goal (1 subgoal):\n***  1. \\<lbrakk>\\<And>x y. f x y = f y x; \\<And>x y z. f z (f x y) = f x (f y z)\\<rbrakk>\n***     \\<Longrightarrow> combine_options f y (combine_options f x z) =\n***        combine_options f x (combine_options f y z)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):\n*** goal (1 subgoal):\n***  1. ⟦⋀x y. f x y = f y x; ⋀x y z. f z (f x y) = f x (f y z)⟧\n***     ⟹ combine_options f y (combine_options f x z) =\n***        combine_options f x\n***         (combine_options f y\n***           z)\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to finish proof (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. \\<lbrakk>\\<And>x y. f x y = f y x; \\<And>x y z. f z (f x y) = f x (f y z)\\<rbrakk>"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    \\<Longrightarrow> combine_options f y (combine_options f x z) ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       combine_options f x (combine_options f y z)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. ⟦⋀x y. f x y = f y x; ⋀x y z. f z (f x y) = f x (f y z)⟧"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    ⟹ combine_options f y (combine_options f x z) ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       combine_options f x"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "        (combine_options f y"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "          z)"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ssu8a02h/E_44ad5e63c0.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.753906583006028,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

@@ -1,0 +1,69 @@
+{
+  "result": {
+    "proof_text": "by force",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):\nFailed to apply initial proof method (line 13 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):\ngoal (1 subgoal):\n 1. ordering (\\<^bold>\\<le>) (\\<^bold><)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ordering (❙≤)\n     (❙<)\nAt command \"by\" (line 13 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.922155666994513,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):\ntheorem ordering_strictI:\n \\<lbrakk>\\<And>a b. ?less_eq a b = (?less a b \\<or> a = b); \\<And>a b. ?less a b \\<Longrightarrow> \\<not> ?less b a;\n  \\<And>a. \\<not> ?less a a; \\<And>a b c. \\<lbrakk>?less a b; ?less b c\\<rbrakk> \\<Longrightarrow> ?less a c\\<rbrakk>\n \\<Longrightarrow> ordering ?less_eq ?less\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):\n*** Failed to apply initial proof method (line 13 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):\n*** goal (1 subgoal):\n***  1. ordering (\\<^bold>\\<le>) (\\<^bold><)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 13 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):\n*** goal (1 subgoal):\n***  1. ordering (❙≤)\n***      (❙<)\n*** At command \"by\" (line 13 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):"
+        },
+        {
+          "line": 13,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 13 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\"):"
+        },
+        {
+          "line": 13,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 13,
+          "col": null,
+          "message": " 1. ordering (\\<^bold>\\<le>) (\\<^bold><)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 13,
+          "col": null,
+          "message": " 1. ordering (❙≤)"
+        },
+        {
+          "line": 13,
+          "col": null,
+          "message": "     (❙<)"
+        },
+        {
+          "line": 13,
+          "col": null,
+          "message": "At command \"by\" (line 13 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g0mqw_n9/E_9b8e8f4354.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.922155666994513,
+      "timed_out": false
+    }
+  },
+  "tactic": "by force",
+  "attempt": 5,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

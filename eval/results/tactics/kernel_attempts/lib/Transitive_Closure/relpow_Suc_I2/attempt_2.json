@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):\nFailed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):\ngoal (1 subgoal):\n 1. \\<lbrakk>(x, y) \\<in> R; (y, z) \\<in> R ^^ n\\<rbrakk> \\<Longrightarrow> (x, z) \\<in> R ^^ n O R\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦(x, y) ∈ R; (y, z) ∈ R ^^ n⟧\n    ⟹ (x, z)\n       ∈ R ^^ n O\n         R\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.906027125005494,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):\n*** goal (1 subgoal):\n***  1. \\<lbrakk>(x, y) \\<in> R; (y, z) \\<in> R ^^ n\\<rbrakk> \\<Longrightarrow> (x, z) \\<in> R ^^ n O R\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):\ntheorem\n  local.relpow_Suc_I2:\n    \\<lbrakk>(?x, ?y) \\<in> ?R; (?y, ?z) \\<in> ?R ^^ ?n\\<rbrakk> \\<Longrightarrow> (?x, ?z) \\<in> ?R ^^ Suc ?n\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):\n*** goal (1 subgoal):\n***  1. ⟦(x, y) ∈ R; (y, z) ∈ R ^^ n⟧\n***     ⟹ (x, z)\n***        ∈ R ^^ n O\n***          R\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. \\<lbrakk>(x, y) \\<in> R; (y, z) \\<in> R ^^ n\\<rbrakk> \\<Longrightarrow> (x, z) \\<in> R ^^ n O R"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. ⟦(x, y) ∈ R; (y, z) ∈ R ^^ n⟧"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    ⟹ (x, z)"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "       ∈ R ^^ n O"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "         R"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_h6pc5yy4/E_4782a40782.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.906027125005494,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

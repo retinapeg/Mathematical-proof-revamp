@@ -1,0 +1,177 @@
+{
+  "records": [
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "examples",
+        "-O",
+        "Swarm_solution"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 7 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\ntheorem sum_first_odds: (\\<Sum>i<?n. 2 * i + 1) = ?n\\<^sup>2\n\nOutput (line 10 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nhave base: (\\<Sum>i<0. 2 * i + 1) = 0\\<^sup>2\n\nOutput (line 13 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nhave next_sum: (\\<Sum>i<Suc ?k. 2 * i + 1) = (\\<Sum>i<?k. 2 * i + 1) + (2 * ?k + 1)\n\nOutput (line 16 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nhave next_square: ?k\\<^sup>2 + (2 * ?k + 1) = (Suc ?k)\\<^sup>2\n\nOutput (line 19 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nhave induction_step:\n       (\\<Sum>i<?k. 2 * i + 1) = ?k\\<^sup>2 \\<Longrightarrow> (\\<Sum>i<Suc ?k. 2 * i + 1) = (Suc ?k)\\<^sup>2\n\nOutput (line 25 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nshow (\\<Sum>i<k. 2 * i + 1) = k\\<^sup>2\n\nOutput (line 26 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nhave all_n: (\\<Sum>i<?k. 2 * i + 1) = ?k\\<^sup>2\n\nOutput (line 29 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nhave result: (\\<Sum>i<n. 2 * i + 1) = n\\<^sup>2\n\nOutput (line 30 of \"~/Mathematical-proof-revamp/examples/Swarm_solution.thy\"):\nshow (\\<Sum>i<n. 2 * i + 1) = n\\<^sup>2\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "wall_s": 8.491511625001294
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "examples",
+        "-O",
+        "Swarm"
+      ],
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 7 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\ntheorem sum_first_odds: (\\<Sum>i<?n. 2 * i + 1) = ?n\\<^sup>2\n\nError (line 7 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\n*** Cheating requires quick_and_dirty mode!\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Cheating requires quick_and_dirty mode!\n*** At command \"sorry\" (line 10 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "wall_s": 8.17142454200075
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "examples",
+        "-O",
+        "-o",
+        "quick_and_dirty=false",
+        "Swarm"
+      ],
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 7 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\ntheorem sum_first_odds: (\\<Sum>i<?n. 2 * i + 1) = ?n\\<^sup>2\n\nError (line 7 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\n*** Cheating requires quick_and_dirty mode!\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Cheating requires quick_and_dirty mode!\n*** At command \"sorry\" (line 10 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "wall_s": 7.363003166999988
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "examples",
+        "-O",
+        "-o",
+        "quick_and_dirty=true",
+        "Swarm"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 7 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\ntheorem sum_first_odds: (\\<Sum>i<?n. 2 * i + 1) = ?n\\<^sup>2\n\nOutput (line 10 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\nhave base: (\\<Sum>i<0. 2 * i + 1) = 0\\<^sup>2\n\nOutput (line 13 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\nhave next_sum: (\\<Sum>i<Suc ?k. 2 * i + 1) = (\\<Sum>i<?k. 2 * i + 1) + (2 * ?k + 1)\n\nOutput (line 16 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\nhave next_square: ?k\\<^sup>2 + (2 * ?k + 1) = (Suc ?k)\\<^sup>2\n\nOutput (line 19 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\nhave induction_step:\n       (\\<Sum>i<?k. 2 * i + 1) = ?k\\<^sup>2 \\<Longrightarrow> (\\<Sum>i<Suc ?k. 2 * i + 1) = (Suc ?k)\\<^sup>2\n\nOutput (line 22 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\nhave all_n: (\\<Sum>i<?k. 2 * i + 1) = ?k\\<^sup>2\n\nOutput (line 25 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\nhave result: (\\<Sum>i<n. 2 * i + 1) = n\\<^sup>2\n\nOutput (line 26 of \"~/Mathematical-proof-revamp/examples/Swarm.thy\"):\nshow (\\<Sum>i<n. 2 * i + 1) = n\\<^sup>2\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "wall_s": 8.69646533299965
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_syntax_error"
+      ],
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_syntax_error.thy\"):\ntheorem probe: True\n\nError (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_syntax_error.thy\"):\n*** Outer syntax error (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_syntax_error.thy\"): keyword \"(\" expected,\n*** but end-of-input (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_syntax_error.thy\") was found\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Outer syntax error (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_syntax_error.thy\"): keyword \"(\" expected,\n*** but end-of-input (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_syntax_error.thy\") was found\n*** At command \"<malformed>\" (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_syntax_error.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "wall_s": 7.032000750001316
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_unknown_fact"
+      ],
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_unknown_fact.thy\"):\ntheorem probe: True\n\nError (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_unknown_fact.thy\"):\n*** Undefined fact: \"nonexistent_eval_fact_3819\" (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_unknown_fact.thy\")\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Undefined fact: \"nonexistent_eval_fact_3819\" (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_unknown_fact.thy\")\n*** At command \"by\" (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_unknown_fact.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "wall_s": 8.046399375001783
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_method_failed"
+      ],
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_method_failed.thy\"):\ntheorem probe: ?x = ?y\n\nError (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_method_failed.thy\"):\n*** Failed to apply initial proof method (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_method_failed.thy\"):\n*** goal (1 subgoal):\n***  1. x = y\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_method_failed.thy\"):\n*** goal (1 subgoal):\n***  1. x =\n***     y\n*** At command \"by\" (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_method_failed.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "wall_s": 7.028859750000265
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_trivial"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_trivial.thy\"):\ntheorem probe: True\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "wall_s": 6.998562707998644
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_trivial"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_trivial.thy\"):\ntheorem probe: True\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "wall_s": 7.058327665999968
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_trivial"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_trivial.thy\"):\ntheorem probe: True\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "wall_s": 6.968048875001841
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_trivial"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_trivial.thy\"):\ntheorem probe: True\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "wall_s": 6.967318041002727
+    },
+    {
+      "command": [
+        "isabelle",
+        "process_theories",
+        "-D",
+        "eval/results/m0/work",
+        "-O",
+        "E_trivial"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Draft ...\n\nOutput (line 4 of \"~/Mathematical-proof-revamp/eval/results/m0/work/E_trivial.thy\"):\ntheorem probe: True\nFinished Draft (0:00:01 elapsed time)\n",
+      "stderr": "",
+      "wall_s": 7.09383579200221
+    }
+  ],
+  "trivial_median_s": 6.998562707998644
+}

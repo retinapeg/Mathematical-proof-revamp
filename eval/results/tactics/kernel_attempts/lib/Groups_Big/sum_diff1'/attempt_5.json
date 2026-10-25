@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by force",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):\nFailed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):\ngoal (1 subgoal):\n 1. sum' f (I - {i}) = (if i \\<in> I then sum' f I - f i else sum' f I)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. sum' f (I - {i}) =\n    (if i ∈ I then sum' f I - f i\n     else sum' f\n           I)\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.482807874999708,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):\ntheorem sum_diff1':\n finite {i \\<in> ?I. ?f i \\<noteq> 0} \\<Longrightarrow>\n sum' ?f (?I - {?i}) = (if ?i \\<in> ?I then sum' ?f ?I - ?f ?i else sum' ?f ?I)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):\n*** goal (1 subgoal):\n***  1. sum' f (I - {i}) = (if i \\<in> I then sum' f I - f i else sum' f I)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):\n*** goal (1 subgoal):\n***  1. sum' f (I - {i}) =\n***     (if i ∈ I then sum' f I - f i\n***      else sum' f\n***            I)\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. sum' f (I - {i}) = (if i \\<in> I then sum' f I - f i else sum' f I)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. sum' f (I - {i}) ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    (if i ∈ I then sum' f I - f i"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "     else sum' f"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "           I)"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_bqz_3yje/E_26e52bbf26.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.482807874999708,
+      "timed_out": false
+    }
+  },
+  "tactic": "by force",
+  "attempt": 5,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

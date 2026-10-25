@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by simp",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):\nFailed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):\ngoal (1 subgoal):\n 1. \\<lbrakk>wfp_on B R; A \\<subseteq> B; \\<And>x y. \\<lbrakk>x \\<in> A; y \\<in> A; Q x y\\<rbrakk> \\<Longrightarrow> R x y\\<rbrakk> \\<Longrightarrow> wfp_on A Q\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦wfp_on B R; A ⊆ B; ⋀x y. ⟦x ∈ A; y ∈ A; Q x y⟧ ⟹ R x y⟧\n    ⟹ wfp_on A\n        Q\nAt command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.908253874993534,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):\n*** goal (1 subgoal):\n***  1. \\<lbrakk>wfp_on B R; A \\<subseteq> B; \\<And>x y. \\<lbrakk>x \\<in> A; y \\<in> A; Q x y\\<rbrakk> \\<Longrightarrow> R x y\\<rbrakk> \\<Longrightarrow> wfp_on A Q\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):\ntheorem\n  local.wfp_on_mono_strong:\n    \\<lbrakk>wfp_on ?B ?R; ?A \\<subseteq> ?B; \\<And>x y. \\<lbrakk>x \\<in> ?A; y \\<in> ?A; ?Q x y\\<rbrakk> \\<Longrightarrow> ?R x y\\<rbrakk>\n    \\<Longrightarrow> wfp_on ?A ?Q\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):\n*** goal (1 subgoal):\n***  1. ⟦wfp_on B R; A ⊆ B; ⋀x y. ⟦x ∈ A; y ∈ A; Q x y⟧ ⟹ R x y⟧\n***     ⟹ wfp_on A\n***         Q\n*** At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. \\<lbrakk>wfp_on B R; A \\<subseteq> B; \\<And>x y. \\<lbrakk>x \\<in> A; y \\<in> A; Q x y\\<rbrakk> \\<Longrightarrow> R x y\\<rbrakk> \\<Longrightarrow> wfp_on A Q"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. ⟦wfp_on B R; A ⊆ B; ⋀x y. ⟦x ∈ A; y ∈ A; Q x y⟧ ⟹ R x y⟧"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "    ⟹ wfp_on A"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "        Q"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ojdjeuq1/E_5a5fc4da3a.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.908253874993534,
+      "timed_out": false
+    }
+  },
+  "tactic": "by simp",
+  "attempt": 1,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

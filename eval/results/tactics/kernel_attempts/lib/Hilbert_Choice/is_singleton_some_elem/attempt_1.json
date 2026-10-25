@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by simp",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):\ngoal (1 subgoal):\n 1. is_singleton A = (A = {some_elem A})\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. is_singleton A =\n    (A =\n     {some_elem\n       A})\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.032447082994622,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):\ntheorem\n  local.is_singleton_some_elem: is_singleton ?A = (?A = {some_elem ?A})\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):\n*** goal (1 subgoal):\n***  1. is_singleton A = (A = {some_elem A})\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):\n*** goal (1 subgoal):\n***  1. is_singleton A =\n***     (A =\n***      {some_elem\n***        A})\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. is_singleton A = (A = {some_elem A})"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. is_singleton A ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    (A ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     {some_elem"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "       A})"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_tzttxi1o/E_70d5825ef5.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.032447082994622,
+      "timed_out": false
+    }
+  },
+  "tactic": "by simp",
+  "attempt": 1,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

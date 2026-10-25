@@ -1,0 +1,15 @@
+{
+  "result": {
+    "proved": false,
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "failure_class": "method_failed",
+    "error": "Failed to finish proof",
+    "kernel_wall_s": 1
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "git_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "isabelle_version": "test-version"
+}

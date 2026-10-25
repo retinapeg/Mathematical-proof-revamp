@@ -1,0 +1,32 @@
+{
+  "smoke_complete": false,
+  "proceed_to_full": false,
+  "errors": [
+    "check 1: ValueError: No configured models for the real-provider smoke run",
+    "check 2: ValueError: No configured models for the real-provider smoke run",
+    "check 3: ValueError: No configured models for the real-provider smoke run"
+  ],
+  "dropped": [],
+  "before_shrinking": {
+    "conditions": [],
+    "lemmas": 290,
+    "prior_usd_cost": 0,
+    "projected_llm_usd": 0.0,
+    "projected_total_usd": 0.0,
+    "kernel_hours": 0.0,
+    "projected_hours": 0.0
+  },
+  "projection": {
+    "conditions": [],
+    "lemmas": 290,
+    "prior_usd_cost": 0,
+    "projected_llm_usd": 0.0,
+    "projected_total_usd": 0.0,
+    "kernel_hours": 0.0,
+    "projected_hours": 0.0
+  },
+  "max_usd": 25,
+  "max_hours": 8,
+  "kernel_median_s": 6.998562707998644,
+  "samples": {}
+}

@@ -1,0 +1,119 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):\nFailed to finish proof (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):\ngoal (5 subgoals):\n 1. \\<lbrakk>i < j; k = l\\<rbrakk> \\<Longrightarrow> i + l < j + l\n 2. \\<lbrakk>i = j; k < l\\<rbrakk> \\<Longrightarrow> j + k < j + l\n 3. \\<lbrakk>i < j; k \\<le> l\\<rbrakk> \\<Longrightarrow> i + k < j + l\n 4. \\<lbrakk>i \\<le> j; k < l\\<rbrakk> \\<Longrightarrow> i + k < j + l\n 5. \\<lbrakk>i < j; k < l\\<rbrakk> \\<Longrightarrow> i + k < j + l\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦i < j; k = l⟧ ⟹ i + l < j + l\n 2. ⟦i = j; k < l⟧ ⟹ j + k < j + l\n 3. ⟦i < j; k ≤ l⟧ ⟹ i + k < j + l\n 4. ⟦i ≤ j; k < l⟧ ⟹ i + k < j + l\n 5. ⟦i < j; k < l⟧\n    ⟹ i + k\n       < j +\n         l\nAt command \"by\" (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 9.305285459005972,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):\ntheorem add_mono_thms_linordered_field:\n (?i < ?j \\<and> ?k = ?l \\<Longrightarrow> ?i + ?k < ?j + ?l\n  and ?i = ?j \\<and> ?k < ?l \\<Longrightarrow> ?i + ?k < ?j + ?l\n  and ?i < ?j \\<and> ?k \\<le> ?l \\<Longrightarrow> ?i + ?k < ?j + ?l\n  and ?i \\<le> ?j \\<and> ?k < ?l \\<Longrightarrow> ?i + ?k < ?j + ?l\n  and ?i < ?j \\<and> ?k < ?l \\<Longrightarrow> ?i + ?k < ?j + ?l)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):\n*** Failed to finish proof (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):\n*** goal (5 subgoals):\n***  1. \\<lbrakk>i < j; k = l\\<rbrakk> \\<Longrightarrow> i + l < j + l\n***  2. \\<lbrakk>i = j; k < l\\<rbrakk> \\<Longrightarrow> j + k < j + l\n***  3. \\<lbrakk>i < j; k \\<le> l\\<rbrakk> \\<Longrightarrow> i + k < j + l\n***  4. \\<lbrakk>i \\<le> j; k < l\\<rbrakk> \\<Longrightarrow> i + k < j + l\n***  5. \\<lbrakk>i < j; k < l\\<rbrakk> \\<Longrightarrow> i + k < j + l\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):\n*** goal (5 subgoals):\n***  1. ⟦i < j; k = l⟧ ⟹ i + l < j + l\n***  2. ⟦i = j; k < l⟧ ⟹ j + k < j + l\n***  3. ⟦i < j; k ≤ l⟧ ⟹ i + k < j + l\n***  4. ⟦i ≤ j; k < l⟧ ⟹ i + k < j + l\n***  5. ⟦i < j; k < l⟧\n***     ⟹ i + k\n***        < j +\n***          l\n*** At command \"by\" (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "Failed to finish proof (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\"):"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "goal (5 subgoals):"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 1. \\<lbrakk>i < j; k = l\\<rbrakk> \\<Longrightarrow> i + l < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 2. \\<lbrakk>i = j; k < l\\<rbrakk> \\<Longrightarrow> j + k < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 3. \\<lbrakk>i < j; k \\<le> l\\<rbrakk> \\<Longrightarrow> i + k < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 4. \\<lbrakk>i \\<le> j; k < l\\<rbrakk> \\<Longrightarrow> i + k < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 5. \\<lbrakk>i < j; k < l\\<rbrakk> \\<Longrightarrow> i + k < j + l"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 1. ⟦i < j; k = l⟧ ⟹ i + l < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 2. ⟦i = j; k < l⟧ ⟹ j + k < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 3. ⟦i < j; k ≤ l⟧ ⟹ i + k < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 4. ⟦i ≤ j; k < l⟧ ⟹ i + k < j + l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": " 5. ⟦i < j; k < l⟧"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "    ⟹ i + k"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "       < j +"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "         l"
+        },
+        {
+          "line": 12,
+          "col": null,
+          "message": "At command \"by\" (line 12 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_q3s8u0g8/E_24922dbf38.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 9.305285459005972,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

@@ -1,0 +1,69 @@
+{
+  "result": {
+    "proof_text": "by arith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):\nFailed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):\ngoal (1 subgoal):\n 1. ((x, a) \\<notin> r \\<Longrightarrow> thesis) \\<Longrightarrow> thesis\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ((x, a) ∉ r ⟹ thesis) ⟹\n    thesis\nAt command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.785595290988567,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):\ntheorem wf_asym:\n \\<lbrakk>wf ?r; (?a, ?x) \\<in> ?r; (?x, ?a) \\<notin> ?r \\<Longrightarrow> ?thesis\\<rbrakk> \\<Longrightarrow> ?thesis\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):\n*** goal (1 subgoal):\n***  1. ((x, a) \\<notin> r \\<Longrightarrow> thesis) \\<Longrightarrow> thesis\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):\n*** goal (1 subgoal):\n***  1. ((x, a) ∉ r ⟹ thesis) ⟹\n***     thesis\n*** At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. ((x, a) \\<notin> r \\<Longrightarrow> thesis) \\<Longrightarrow> thesis"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. ((x, a) ∉ r ⟹ thesis) ⟹"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    thesis"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xu_31x_n/E_fc9972111a.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.785595290988567,
+      "timed_out": false
+    }
+  },
+  "tactic": "by arith",
+  "attempt": 7,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

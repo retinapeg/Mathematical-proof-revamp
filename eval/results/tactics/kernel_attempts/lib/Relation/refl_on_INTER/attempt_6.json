@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by linarith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):\ngoal (1 subgoal):\n 1. \\<forall>x\\<in>S. refl_on (A x) (r x) \\<Longrightarrow> refl_on (\\<Inter> (A ` S)) (\\<Inter> (r ` S))\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ∀x∈S. refl_on (A x) (r x) ⟹\n    refl_on (⋂ (A ` S))\n     (⋂ (r `\n         S))\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.660867500002496,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):\ntheorem\n  local.refl_on_INTER:\n    \\<forall>x\\<in>?S. refl_on (?A x) (?r x) \\<Longrightarrow> refl_on (\\<Inter> (?A ` ?S)) (\\<Inter> (?r ` ?S))\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):\n*** goal (1 subgoal):\n***  1. \\<forall>x\\<in>S. refl_on (A x) (r x) \\<Longrightarrow> refl_on (\\<Inter> (A ` S)) (\\<Inter> (r ` S))\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):\n*** goal (1 subgoal):\n***  1. ∀x∈S. refl_on (A x) (r x) ⟹\n***     refl_on (⋂ (A ` S))\n***      (⋂ (r `\n***          S))\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. \\<forall>x\\<in>S. refl_on (A x) (r x) \\<Longrightarrow> refl_on (\\<Inter> (A ` S)) (\\<Inter> (r ` S))"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. ∀x∈S. refl_on (A x) (r x) ⟹"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    refl_on (⋂ (A ` S))"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     (⋂ (r `"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "         S))"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ezmf98sx/E_a05b41dd3f.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.660867500002496,
+      "timed_out": false
+    }
+  },
+  "tactic": "by linarith",
+  "attempt": 6,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

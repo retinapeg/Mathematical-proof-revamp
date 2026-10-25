@@ -1,0 +1,56 @@
+{
+  "isabelle_version": "Isabelle2025-2",
+  "lib": {
+    "count": 250,
+    "imports": {
+      "Main": 238,
+      "Complex_Main": 12
+    },
+    "orig_proof_lines": {
+      "1": 198,
+      "2-3": 11,
+      "4-8": 19,
+      "9+": 22
+    },
+    "sources": {
+      "Binomial.thy": 12,
+      "Finite_Set.thy": 12,
+      "Fun.thy": 13,
+      "GCD.thy": 13,
+      "Groups.thy": 5,
+      "Groups_Big.thy": 13,
+      "Hilbert_Choice.thy": 15,
+      "Int.thy": 13,
+      "List.thy": 14,
+      "Map.thy": 11,
+      "Option.thy": 14,
+      "Orderings.thy": 12,
+      "Parity.thy": 14,
+      "Power.thy": 14,
+      "Product_Type.thy": 11,
+      "Set.thy": 14,
+      "Transitive_Closure.thy": 14,
+      "Wellfounded.thy": 13,
+      "Nat.thy": 13,
+      "Relation.thy": 10
+    }
+  },
+  "fresh": {
+    "count": 40,
+    "imports": {
+      "Complex_Main": 39,
+      "Main": 1
+    },
+    "orig_proof_lines": {
+      "1": 28,
+      "9+": 3,
+      "4-8": 9
+    },
+    "sources": {
+      "examples/Swarm_solution.thy": 6,
+      "examples/Cascade_solution.thy": 31,
+      "examples/card/Sqrt4_solution.thy": 2,
+      "examples/Sqrt2.thy": 1
+    }
+  }
+}

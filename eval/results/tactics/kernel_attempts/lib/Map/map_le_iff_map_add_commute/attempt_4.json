@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by fastforce",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):\ngoal (1 subgoal):\n 1. (f \\<subseteq>\\<^sub>m f ++ g) = (f ++ g = g ++ f)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. (f ⊆⇩m f ++ g) =\n    (f ++ g =\n     g ++\n     f)\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 9.082331458994304,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):\ntheorem\n  local.map_le_iff_map_add_commute: (?f \\<subseteq>\\<^sub>m ?f ++ ?g) = (?f ++ ?g = ?g ++ ?f)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):\n*** goal (1 subgoal):\n***  1. (f \\<subseteq>\\<^sub>m f ++ g) = (f ++ g = g ++ f)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):\n*** goal (1 subgoal):\n***  1. (f ⊆⇩m f ++ g) =\n***     (f ++ g =\n***      g ++\n***      f)\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. (f \\<subseteq>\\<^sub>m f ++ g) = (f ++ g = g ++ f)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. (f ⊆⇩m f ++ g) ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    (f ++ g ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     g ++"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     f)"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_jr5db6yp/E_16fee1af91.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 9.082331458994304,
+      "timed_out": false
+    }
+  },
+  "tactic": "by fastforce",
+  "attempt": 4,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

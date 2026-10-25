@@ -1,0 +1,169 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):\nFailed to finish proof (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):\ngoal (6 subgoals):\n 1. \\<And>aa ba.\n       \\<lbrakk>(aa, ba) \\<in> (insert (a, b) r)\\<^sup>+; (aa, ba) \\<notin> r\\<^sup>+; aa \\<noteq> a\\<rbrakk>\n       \\<Longrightarrow> (aa, a) \\<in> r\\<^sup>+\n 2. \\<And>aa ba.\n       \\<lbrakk>(aa, ba) \\<in> (insert (a, b) r)\\<^sup>+; (aa, ba) \\<notin> r\\<^sup>+; ba \\<noteq> b\\<rbrakk>\n       \\<Longrightarrow> (b, ba) \\<in> r\\<^sup>+\n 3. \\<And>aa ba. (aa, ba) \\<in> r\\<^sup>+ \\<Longrightarrow> (aa, ba) \\<in> (insert (a, b) r)\\<^sup>+\n 4. \\<And>aa ba. \\<lbrakk>(aa, a) \\<in> r\\<^sup>+; (b, ba) \\<in> r\\<^sup>+\\<rbrakk> \\<Longrightarrow> (aa, ba) \\<in> (insert (a, b) r)\\<^sup>+\n 5. \\<And>aa. (aa, a) \\<in> r\\<^sup>+ \\<Longrightarrow> (aa, b) \\<in> (insert (a, b) r)\\<^sup>+\n 6. \\<And>ba. (b, ba) \\<in> r\\<^sup>+ \\<Longrightarrow> (a, ba) \\<in> (insert (a, b) r)\\<^sup>+\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⋀aa ba.\n       ⟦(aa, ba) ∈ (insert (a, b) r)⇧+; (aa, ba) ∉ r⇧+; aa ≠ a⟧\n       ⟹ (aa, a) ∈ r⇧+\n 2. ⋀aa ba.\n       ⟦(aa, ba) ∈ (insert (a, b) r)⇧+; (aa, ba) ∉ r⇧+; ba ≠ b⟧\n       ⟹ (b, ba) ∈ r⇧+\n 3. ⋀aa ba. (aa, ba) ∈ r⇧+ ⟹ (aa, ba) ∈ (insert (a, b) r)⇧+\n 4. ⋀aa ba. ⟦(aa, a) ∈ r⇧+; (b, ba) ∈ r⇧+⟧ ⟹ (aa, ba) ∈ (insert (a, b) r)⇧+\n 5. ⋀aa. (aa, a) ∈ r⇧+ ⟹ (aa, b) ∈ (insert (a, b) r)⇧+\n 6. ⋀ba. (b, ba) ∈ r⇧+ ⟹\n         (a, ba)\n         ∈ (insert (a, b)\n             r)⇧+\nAt command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.405952166998759,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):\ntheorem\n  local.trancl_insert2:\n    (insert (?a, ?b) ?r)\\<^sup>+ =\n    ?r\\<^sup>+ \\<union> {(x, y). ((x, ?a) \\<in> ?r\\<^sup>+ \\<or> x = ?a) \\<and> ((?b, y) \\<in> ?r\\<^sup>+ \\<or> y = ?b)}\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):\n*** Failed to finish proof (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):\n*** goal (6 subgoals):\n***  1. \\<And>aa ba.\n***        \\<lbrakk>(aa, ba) \\<in> (insert (a, b) r)\\<^sup>+; (aa, ba) \\<notin> r\\<^sup>+; aa \\<noteq> a\\<rbrakk>\n***        \\<Longrightarrow> (aa, a) \\<in> r\\<^sup>+\n***  2. \\<And>aa ba.\n***        \\<lbrakk>(aa, ba) \\<in> (insert (a, b) r)\\<^sup>+; (aa, ba) \\<notin> r\\<^sup>+; ba \\<noteq> b\\<rbrakk>\n***        \\<Longrightarrow> (b, ba) \\<in> r\\<^sup>+\n***  3. \\<And>aa ba. (aa, ba) \\<in> r\\<^sup>+ \\<Longrightarrow> (aa, ba) \\<in> (insert (a, b) r)\\<^sup>+\n***  4. \\<And>aa ba. \\<lbrakk>(aa, a) \\<in> r\\<^sup>+; (b, ba) \\<in> r\\<^sup>+\\<rbrakk> \\<Longrightarrow> (aa, ba) \\<in> (insert (a, b) r)\\<^sup>+\n***  5. \\<And>aa. (aa, a) \\<in> r\\<^sup>+ \\<Longrightarrow> (aa, b) \\<in> (insert (a, b) r)\\<^sup>+\n***  6. \\<And>ba. (b, ba) \\<in> r\\<^sup>+ \\<Longrightarrow> (a, ba) \\<in> (insert (a, b) r)\\<^sup>+\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):\n*** goal (6 subgoals):\n***  1. ⋀aa ba.\n***        ⟦(aa, ba) ∈ (insert (a, b) r)⇧+; (aa, ba) ∉ r⇧+; aa ≠ a⟧\n***        ⟹ (aa, a) ∈ r⇧+\n***  2. ⋀aa ba.\n***        ⟦(aa, ba) ∈ (insert (a, b) r)⇧+; (aa, ba) ∉ r⇧+; ba ≠ b⟧\n***        ⟹ (b, ba) ∈ r⇧+\n***  3. ⋀aa ba. (aa, ba) ∈ r⇧+ ⟹ (aa, ba) ∈ (insert (a, b) r)⇧+\n***  4. ⋀aa ba. ⟦(aa, a) ∈ r⇧+; (b, ba) ∈ r⇧+⟧ ⟹ (aa, ba) ∈ (insert (a, b) r)⇧+\n***  5. ⋀aa. (aa, a) ∈ r⇧+ ⟹ (aa, b) ∈ (insert (a, b) r)⇧+\n***  6. ⋀ba. (b, ba) ∈ r⇧+ ⟹\n***          (a, ba)\n***          ∈ (insert (a, b)\n***              r)⇧+\n*** At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "Failed to finish proof (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\"):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "goal (6 subgoals):"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. \\<And>aa ba."
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       \\<lbrakk>(aa, ba) \\<in> (insert (a, b) r)\\<^sup>+; (aa, ba) \\<notin> r\\<^sup>+; aa \\<noteq> a\\<rbrakk>"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       \\<Longrightarrow> (aa, a) \\<in> r\\<^sup>+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 2. \\<And>aa ba."
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       \\<lbrakk>(aa, ba) \\<in> (insert (a, b) r)\\<^sup>+; (aa, ba) \\<notin> r\\<^sup>+; ba \\<noteq> b\\<rbrakk>"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       \\<Longrightarrow> (b, ba) \\<in> r\\<^sup>+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 3. \\<And>aa ba. (aa, ba) \\<in> r\\<^sup>+ \\<Longrightarrow> (aa, ba) \\<in> (insert (a, b) r)\\<^sup>+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 4. \\<And>aa ba. \\<lbrakk>(aa, a) \\<in> r\\<^sup>+; (b, ba) \\<in> r\\<^sup>+\\<rbrakk> \\<Longrightarrow> (aa, ba) \\<in> (insert (a, b) r)\\<^sup>+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 5. \\<And>aa. (aa, a) \\<in> r\\<^sup>+ \\<Longrightarrow> (aa, b) \\<in> (insert (a, b) r)\\<^sup>+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 6. \\<And>ba. (b, ba) \\<in> r\\<^sup>+ \\<Longrightarrow> (a, ba) \\<in> (insert (a, b) r)\\<^sup>+"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 1. ⋀aa ba."
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       ⟦(aa, ba) ∈ (insert (a, b) r)⇧+; (aa, ba) ∉ r⇧+; aa ≠ a⟧"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       ⟹ (aa, a) ∈ r⇧+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 2. ⋀aa ba."
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       ⟦(aa, ba) ∈ (insert (a, b) r)⇧+; (aa, ba) ∉ r⇧+; ba ≠ b⟧"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "       ⟹ (b, ba) ∈ r⇧+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 3. ⋀aa ba. (aa, ba) ∈ r⇧+ ⟹ (aa, ba) ∈ (insert (a, b) r)⇧+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 4. ⋀aa ba. ⟦(aa, a) ∈ r⇧+; (b, ba) ∈ r⇧+⟧ ⟹ (aa, ba) ∈ (insert (a, b) r)⇧+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 5. ⋀aa. (aa, a) ∈ r⇧+ ⟹ (aa, b) ∈ (insert (a, b) r)⇧+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": " 6. ⋀ba. (b, ba) ∈ r⇧+ ⟹"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "         (a, ba)"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "         ∈ (insert (a, b)"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "             r)⇧+"
+        },
+        {
+          "line": 7,
+          "col": null,
+          "message": "At command \"by\" (line 7 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fshpg7fs/E_1c76153def.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.405952166998759,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

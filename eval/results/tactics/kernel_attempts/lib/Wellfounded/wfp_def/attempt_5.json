@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by force",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):\ngoal (1 subgoal):\n 1. wfp r = wf {(x, y). r x y}\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. wfp r =\n    wf {(x, y).\n        r x y}\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 9.684218124995823,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):\n*** goal (1 subgoal):\n***  1. wfp r = wf {(x, y). r x y}\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):\ntheorem local.wfp_def: wfp ?r = wf {(x, y). ?r x y}\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):\n*** goal (1 subgoal):\n***  1. wfp r =\n***     wf {(x, y).\n***         r x y}\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. wfp r = wf {(x, y). r x y}"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. wfp r ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    wf {(x, y)."
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "        r x y}"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_mef07o2z/E_b6c3e3112d.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 9.684218124995823,
+      "timed_out": false
+    }
+  },
+  "tactic": "by force",
+  "attempt": 5,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

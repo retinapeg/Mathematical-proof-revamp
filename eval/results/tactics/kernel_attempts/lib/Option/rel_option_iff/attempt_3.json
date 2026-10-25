@@ -1,0 +1,89 @@
+{
+  "result": {
+    "proof_text": "by blast",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):\nFailed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):\ngoal (1 subgoal):\n 1. rel_option R x y =\n    (case (x, y) of (None, None) \\<Rightarrow> True | (None, Some a) \\<Rightarrow> False\n     | (Some x, None) \\<Rightarrow> False | (Some x, Some y) \\<Rightarrow> R x y)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n    (case (x, y) of (None, None) ⇒ True | (None, Some a) ⇒ False\n     | (Some x, None) ⇒ False\n     | (Some x, Some y) ⇒\n         R x y)\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 9.266259249998257,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):\ntheorem\n  local.rel_option_iff:\n    rel_option ?R ?x ?y =\n    (case (?x, ?y) of (None, None) \\<Rightarrow> True | (None, Some a) \\<Rightarrow> False\n     | (Some x, None) \\<Rightarrow> False | (Some x, Some y) \\<Rightarrow> ?R x y)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):\n*** goal (1 subgoal):\n***  1. rel_option R x y =\n***     (case (x, y) of (None, None) \\<Rightarrow> True | (None, Some a) \\<Rightarrow> False\n***      | (Some x, None) \\<Rightarrow> False | (Some x, Some y) \\<Rightarrow> R x y)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):\n*** goal (1 subgoal):\n***  1. rel_option R x y =\n***     (case (x, y) of (None, None) ⇒ True | (None, Some a) ⇒ False\n***      | (Some x, None) ⇒ False\n***      | (Some x, Some y) ⇒\n***          R x y)\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. rel_option R x y ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    (case (x, y) of (None, None) \\<Rightarrow> True | (None, Some a) \\<Rightarrow> False"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "     | (Some x, None) \\<Rightarrow> False | (Some x, Some y) \\<Rightarrow> R x y)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "    (case (x, y) of (None, None) ⇒ True | (None, Some a) ⇒ False"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "     | (Some x, None) ⇒ False"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "     | (Some x, Some y) ⇒"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "         R x y)"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_0nui8mcp/E_ed54fa4c9e.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 9.266259249998257,
+      "timed_out": false
+    }
+  },
+  "tactic": "by blast",
+  "attempt": 3,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

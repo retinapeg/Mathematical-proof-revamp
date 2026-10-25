@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by arith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):\ngoal (1 subgoal):\n 1. (\\<forall>i<Suc n. P i) = (P n \\<and> (\\<forall>i<n. P i))\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. (∀i<Suc n. P i) =\n    (P n ∧\n     (∀i<n. P i))\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 9.723928084000363,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):\ntheorem local.All_less_Suc: (\\<forall>i<Suc ?n. ?P i) = (?P ?n \\<and> (\\<forall>i<?n. ?P i))\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):\n*** goal (1 subgoal):\n***  1. (\\<forall>i<Suc n. P i) = (P n \\<and> (\\<forall>i<n. P i))\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):\n*** goal (1 subgoal):\n***  1. (∀i<Suc n. P i) =\n***     (P n ∧\n***      (∀i<n. P i))\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. (\\<forall>i<Suc n. P i) = (P n \\<and> (\\<forall>i<n. P i))"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. (∀i<Suc n. P i) ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    (P n ∧"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     (∀i<n. P i))"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_byc1p0gs/E_5eaed2de89.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 9.723928084000363,
+      "timed_out": false
+    }
+  },
+  "tactic": "by arith",
+  "attempt": 7,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

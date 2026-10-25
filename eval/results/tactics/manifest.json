@@ -1,0 +1,2636 @@
+{
+  "config": {
+    "run_id": "tactics",
+    "corpus": [
+      "eval/corpus/lib.jsonl",
+      "eval/corpus/fresh.jsonl"
+    ],
+    "conditions": [
+      {
+        "model": "tactics",
+        "provider": "tactics",
+        "max_attempts": 8
+      }
+    ],
+    "cost_usd_per_m": {},
+    "workers": 2,
+    "kernel_timeout_s": 30,
+    "max_usd": 0,
+    "max_hours": 8
+  },
+  "fingerprint": "6c18a86b8127e15f10e1a2802bc2c353b7a2e3121c2fbbc50c783cbeb01e2cad",
+  "tasks": [
+    {
+      "id": "lib/Binomial/gbinomial_absorb_comp",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma gbinomial_absorb_comp: \"(a - of_nat k) * (a gchoose k) = a * ((a - 1) gchoose k)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Finite_Set/finite_Plus_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma finite_Plus_iff: \"finite (A <+> B) \\<longleftrightarrow> finite A \\<and> finite B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/inj_vimage_singleton",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inj_vimage_singleton: \"inj f \\<Longrightarrow> f -` {a} \\<subseteq> {THE x. f x = a}\"\n  \\<comment> \\<open>The inverse image of a singleton under an injective function is included in a singleton.\\<close>",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/lcm_abs2_int",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma lcm_abs2_int:\n  \"lcm x \\<bar>y\\<bar> = lcm x y\"\n  for x y :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups/add_mono_thms_linordered_field",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma add_mono_thms_linordered_field:\n  fixes i j k :: \"'a::ordered_cancel_ab_semigroup_add\"\n  shows \"i < j \\<and> k = l \\<Longrightarrow> i + k < j + l\"\n    and \"i = j \\<and> k < l \\<Longrightarrow> i + k < j + l\"\n    and \"i < j \\<and> k \\<le> l \\<Longrightarrow> i + k < j + l\"\n    and \"i \\<le> j \\<and> k < l \\<Longrightarrow> i + k < j + l\"\n    and \"i < j \\<and> k < l \\<Longrightarrow> i + k < j + l\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Groups_Big/prod_power_distrib",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma prod_power_distrib: \"prod f A ^ n = prod (\\<lambda>x. (f x) ^ n) A\"\n  for f :: \"'a \\<Rightarrow> 'b::comm_semiring_1\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/bij_vimage_eq_inv_image",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bij_vimage_eq_inv_image:\n  assumes \"bij f\"\n  shows \"f -` A = inv f ` A\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "lib/Int/intrel_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma intrel_iff: \"intrel (x, y) (u, v) \\<longleftrightarrow> x + v = u + y\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/transpose_aux_filter_head",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma transpose_aux_filter_head:\n  \"concat (map (case_list [] (\\<lambda>h t. [h])) xss) =\n  map (\\<lambda>xs. hd xs) (filter (\\<lambda>ys. ys \\<noteq> []) xss)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Map/upd_None_map_le",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma upd_None_map_le: \"f(x := None) \\<subseteq>\\<^sub>m f\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/elem_set",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma elem_set: \"(x \\<in> set_option xo) = (xo = Some x)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/rev_predicate2D",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma rev_predicate2D:\n  \"P x y \\<Longrightarrow> P \\<le> Q \\<Longrightarrow> Q x y\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/euclidean_size_nat_less_eq_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma euclidean_size_nat_less_eq_iff:\n  \\<open>euclidean_size m \\<le> euclidean_size n \\<longleftrightarrow> m \\<le> n\\<close> for m n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/ex_power_ivl2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma ex_power_ivl2: fixes b k :: nat assumes \"b \\<ge> 2\" \"k \\<ge> 2\"\n  shows \"\\<exists>n. b^n < k \\<and> k \\<le> b^(n+1)\"",
+      "orig_proof_lines": 7
+    },
+    {
+      "id": "lib/Product_Type/map_prod_ident",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_prod_ident: \"map_prod (\\<lambda>x. x) (\\<lambda>y. y) = (\\<lambda>z. z)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/Diff_partition",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Diff_partition: \"A \\<subseteq> B \\<Longrightarrow> A \\<union> (B - A) = B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/relpow_Suc_D2'",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma relpow_Suc_D2': \"\\<forall>x y z. (x, y) \\<in> R ^^ n \\<and> (y, z) \\<in> R \\<longrightarrow> (\\<exists>w. (x, w) \\<in> R \\<and> (w, z) \\<in> R ^^ n)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wf_on_if_convertible_to_wf_on",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wf_on_if_convertible_to_wf_on: \"wf_on (f ` A) Q \\<Longrightarrow> (\\<And>x y. x \\<in> A \\<Longrightarrow> y \\<in> A \\<Longrightarrow> (x, y) \\<in> R \\<Longrightarrow> (f x, f y) \\<in> Q) \\<Longrightarrow> wf_on A R\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/card_disjoint_shuffles",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma card_disjoint_shuffles:\n  assumes \"set xs \\<inter> set ys = {}\"\n  shows   \"card (shuffles xs ys) = (length xs + length ys) choose length xs\"",
+      "orig_proof_lines": 19
+    },
+    {
+      "id": "lib/Finite_Set/finite_set",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma finite_set: \"finite (UNIV :: 'a set set) \\<longleftrightarrow> finite (UNIV :: 'a set)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/bij_betwE",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bij_betwE: \"bij_betw f A B \\<Longrightarrow> \\<forall>a\\<in>A. f a \\<in> B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/dvd_lcm_I2_int",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma dvd_lcm_I2_int: \"i dvd n \\<Longrightarrow> i dvd lcm m n\"\n  for i m n :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups/one_reorient",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma one_reorient: \"1 = x \\<longleftrightarrow> x = 1\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/power_sum",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power_sum: \"c ^ (\\<Sum>a\\<in>A. f a) = (\\<Prod>a\\<in>A. c ^ f a)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/is_singleton_some_elem",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma is_singleton_some_elem: \"is_singleton A \\<longleftrightarrow> A = {some_elem A}\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/int_in_range_abs",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma int_in_range_abs: \"int n \\<in> range abs\"",
+      "orig_proof_lines": 3
+    },
+    {
+      "id": "lib/List/successively_cong",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma successively_cong:\n  assumes \"\\<And>x y. x \\<in> set xs \\<Longrightarrow> y \\<in> set xs \\<Longrightarrow> P x y \\<longleftrightarrow> Q x y\" \"xs = ys\"\n  shows   \"successively P xs \\<longleftrightarrow> successively Q ys\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Map/map_le_upds",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_le_upds:\n  \"f \\<subseteq>\\<^sub>m g \\<Longrightarrow> f(as [\\<mapsto>] bs) \\<subseteq>\\<^sub>m g(as [\\<mapsto>] bs)\"",
+      "orig_proof_lines": 5
+    },
+    {
+      "id": "lib/Nat/funpow_mono",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma funpow_mono: \"mono f \\<Longrightarrow> A \\<le> B \\<Longrightarrow> (f ^^ n) A \\<le> (f ^^ n) B\"\n  for f :: \"'a \\<Rightarrow> ('a::order)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/map_option_is_None",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_option_is_None: \"(map_option f opt = None) = (opt = None)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/max_min_same",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma max_min_same:\n  fixes x y :: \"'a :: linorder\"\n  shows \"max x (min x y) = x\" \"max (min x y) x = x\" \"max (min x y) y = y\" \"max y (min x y) = y\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/divmod_BitM_2_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma divmod_BitM_2_eq:\n  \\<open>divmod (Num.BitM m) (Num.Bit0 Num.One) = (numeral m - 1, (1 :: int))\\<close>",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/power_Suc_0",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power_Suc_0: \"Suc 0 ^ n = Suc 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/Times_eq_cancel2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Times_eq_cancel2: \"x \\<in> C \\<Longrightarrow> A \\<times> C = B \\<times> C \\<longleftrightarrow> A = B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/conversep_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma conversep_iff: \"r\\<inverse>\\<inverse> a b = r b a\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/Collect_mono_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Collect_mono_iff: \"Collect P \\<subseteq> Collect Q \\<longleftrightarrow> (\\<forall>x. P x \\<longrightarrow> Q x)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/relpowp_0_E",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma relpowp_0_E: \"(P ^^ 0) x y \\<Longrightarrow> (x = y \\<Longrightarrow> Q) \\<Longrightarrow> Q\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wf_union_compatible",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wf_union_compatible:\n  assumes \"wf R\" \"wf S\"\n  assumes \"R O S \\<subseteq> R\"\n  shows \"wf (R \\<union> S)\"",
+      "orig_proof_lines": 20
+    },
+    {
+      "id": "lib/Finite_Set/inj_on_iff_eq_card",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inj_on_iff_eq_card: \"finite A \\<Longrightarrow> inj_on f A \\<longleftrightarrow> card (f ` A) = card A\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/notIn_Un_bij_betw3",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma notIn_Un_bij_betw3:\n  assumes \"b \\<notin> A\"\n    and \"f b \\<notin> A'\"\n  shows \"bij_betw f A A' = bij_betw f (A \\<union> {b}) (A' \\<union> {f b})\"",
+      "orig_proof_lines": 34
+    },
+    {
+      "id": "lib/GCD/uminus_Gcd_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma uminus_Gcd_eq: \n  fixes K::\"int set\"\n  shows \"Gcd (uminus ` K) = Gcd K\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups/Let_0",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Let_0: \"Let 0 f = f 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/prod_uminus",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma prod_uminus: \"(\\<Prod>x\\<in>A. -f x :: 'a :: comm_ring_1) = (-1) ^ card A * (\\<Prod>x\\<in>A. f x)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/inv_into_into",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inv_into_into: \"x \\<in> f ` A \\<Longrightarrow> inv_into A f x \\<in> A\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/power_int_mult_numeral",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power_int_mult_numeral:\n  \"power_int (power_int x (numeral m)) (numeral n) = power_int x (numeral (m * n))\"\n  for x :: \"'a :: division_ring\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/distinct_tl",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma distinct_tl: \"distinct xs \\<Longrightarrow> distinct (tl xs)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Map/map_le_iff_map_add_commute",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_le_iff_map_add_commute: \"f \\<subseteq>\\<^sub>m f ++ g \\<longleftrightarrow> f ++ g = g ++ f\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/min_0L",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma min_0L: \"min 0 n = 0\"\n  for n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/inj_Some",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inj_Some: \"inj_on Some A\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/xt3",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma xt3:\n assumes \"(a::'a::order) \\<ge> b\"\n    and \"(f b::'b::order) \\<ge> c\"\n    and \"\\<And>x y. x \\<ge> y \\<Longrightarrow> f x \\<ge> f y\"\n  shows  \"f a \\<ge> c\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/double_not_eq_Suc_double",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma double_not_eq_Suc_double:\n  \"2 * m \\<noteq> Suc (2 * n)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/nat_one_le_power",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma nat_one_le_power: \"Suc 0 \\<le> i \\<Longrightarrow> Suc 0 \\<le> i ^ n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/O_assoc",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma O_assoc: \"(R O S) O T = R O (S O T)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/Diff_insert0",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Diff_insert0: \"x \\<notin> A \\<Longrightarrow> A - insert x B = A - B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/tranclp_converseD",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma tranclp_converseD:\n  assumes \"(r\\<inverse>\\<inverse>)\\<^sup>+\\<^sup>+ x y\" shows \"(r\\<^sup>+\\<^sup>+)\\<inverse>\\<inverse> x y\"",
+      "orig_proof_lines": 7
+    },
+    {
+      "id": "lib/Wellfounded/wfp_on_mono_strong",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wfp_on_mono_strong:\n  \"wfp_on B R \\<Longrightarrow> A \\<subseteq> B \\<Longrightarrow> (\\<And>x y. x \\<in> A \\<Longrightarrow> y \\<in> A \\<Longrightarrow> Q x y \\<Longrightarrow> R x y) \\<Longrightarrow> wfp_on A Q\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/fact_fact_dvd_fact",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma fact_fact_dvd_fact:\n  \"fact k * fact n dvd (fact (k + n))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Finite_Set/card_gt_0_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma card_gt_0_iff: \"0 < card A \\<longleftrightarrow> A \\<noteq> {} \\<and> finite A\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/comp_eq_id_dest",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma comp_eq_id_dest: \"a \\<circ> b = id \\<circ> c \\<Longrightarrow> a (b v) = c v\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/bezout_add_strong_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bezout_add_strong_nat:\n  fixes a b :: nat\n  assumes a: \"a \\<noteq> 0\"\n  shows \"\\<exists>d x y. d dvd a \\<and> d dvd b \\<and> a * x = b * y + d\"",
+      "orig_proof_lines": 56
+    },
+    {
+      "id": "lib/Groups/add_mono_thms_linordered_semiring",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma add_mono_thms_linordered_semiring:\n  fixes i j k :: \"'a::ordered_ab_semigroup_add\"\n  shows \"i \\<le> j \\<and> k \\<le> l \\<Longrightarrow> i + k \\<le> j + l\"\n    and \"i = j \\<and> k \\<le> l \\<Longrightarrow> i + k \\<le> j + l\"\n    and \"i \\<le> j \\<and> k = l \\<Longrightarrow> i + k \\<le> j + l\"\n    and \"i = j \\<and> k = l \\<Longrightarrow> i + k = j + l\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/sum_diff1'",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_diff1':\n  fixes f :: \"'a \\<Rightarrow> 'b::ab_group_add\"\n  assumes \"finite {i \\<in> I. f i \\<noteq> 0}\"\n  shows \"sum' f (I - {i}) = (if i \\<in> I then sum' f I - f i else sum' f I)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/mono_bij_Inf",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma mono_bij_Inf:\n  fixes f :: \"'a::complete_linorder \\<Rightarrow> 'b::complete_linorder\"\n  assumes \"mono f\" \"bij f\"\n  shows \"f (Inf A) = Inf (f`A)\"",
+      "orig_proof_lines": 10
+    },
+    {
+      "id": "lib/Int/fraction_numeral_not_in_Ints'",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma fraction_numeral_not_in_Ints':\n  assumes \"b \\<noteq> Num.One\"\n  shows   \"1 / numeral b \\<notin> (\\<int> :: 'a :: {division_ring, ring_char_0} set)\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "lib/List/card_set",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma card_set:\n  \"card (set xs) = length (remdups xs)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Map/ran_map_upd",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma ran_map_upd:  \"m a = None \\<Longrightarrow> ran(m(a\\<mapsto>b)) = insert b (ran m)\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Nat/All_less_Suc",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma All_less_Suc: \"(\\<forall>i < Suc n. P i) = (P n \\<and> (\\<forall>i < n. P i))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/map_option_o_case_sum",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_option_o_case_sum:\n    \"map_option f \\<circ> case_sum g h = case_sum (map_option f \\<circ> g) (map_option f \\<circ> h)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/xt6",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma xt6:\n assumes \"(a::'a::order) \\<ge> f b\" \n    and \"b > c\"\n    and \"\\<And>x y. x > y \\<Longrightarrow> f x > f y\"\n  shows  \"a > f c\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/even_nat_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma even_nat_iff: \"0 \\<le> k \\<Longrightarrow> even (nat k) \\<longleftrightarrow> even k\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/power_gt_expt",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power_gt_expt: \"n > Suc 0 \\<Longrightarrow> n^k > k\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/split_pairs",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma split_pairs: \"(A,B) = X \\<longleftrightarrow> fst X = A \\<and> snd X = B\"\n  and split_pairs2: \"X = (A,B) \\<longleftrightarrow> fst X = A \\<and> snd X = B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/reflp_on_subset",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma reflp_on_subset: \"reflp_on B R \\<Longrightarrow> A \\<subseteq> B \\<Longrightarrow> reflp_on A R\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/vimage_UNIV",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma vimage_UNIV: \"f -` UNIV = UNIV\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/acyclicI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma acyclicI: \"\\<forall>x. (x, x) \\<notin> r\\<^sup>+ \\<Longrightarrow> acyclic r\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wf_iff_acyclic_if_finite",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wf_iff_acyclic_if_finite: \"finite r \\<Longrightarrow> wf r = acyclic r\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/binomial_fact_lemma",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma binomial_fact_lemma: \"k \\<le> n \\<Longrightarrow> fact k * fact (n - k) * (n choose k) = fact n\"",
+      "orig_proof_lines": 37
+    },
+    {
+      "id": "lib/Finite_Set/finite_Field",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma finite_Field: \"finite r \\<Longrightarrow> finite (Field r)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/bij_id",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bij_id: \"bij id\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/Max_divisors_self_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Max_divisors_self_nat: \"n \\<noteq> 0 \\<Longrightarrow> Max {d::nat. d dvd n} = n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups/zero_reorient",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma zero_reorient: \"0 = x \\<longleftrightarrow> x = 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/sum_abs_ge_zero",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_abs_ge_zero: \"0 \\<le> sum (\\<lambda>i. \\<bar>f i\\<bar>) A\"\n  for f :: \"'a \\<Rightarrow> 'b::ordered_ab_group_add_abs\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/bchoice_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bchoice_iff: \"(\\<forall>x\\<in>S. \\<exists>y. Q x y) \\<longleftrightarrow> (\\<exists>f. \\<forall>x\\<in>S. Q x (f x))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/diff_in_Ints_iff_right",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma diff_in_Ints_iff_right: \"y \\<in> \\<int> \\<Longrightarrow> x - y \\<in> \\<int> \\<longleftrightarrow> x \\<in> \\<int>\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/distinct_adj_map_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma distinct_adj_map_iff: \"inj_on f (set xs) \\<Longrightarrow> distinct_adj (map f xs) \\<longleftrightarrow> distinct_adj xs\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Map/map_add_comm",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_add_comm: \"dom m1 \\<inter> dom m2 = {} \\<Longrightarrow> m1 ++ m2 = m2 ++ m1\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/add_diff_assoc2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma add_diff_assoc2: \"k \\<le> j \\<Longrightarrow> j - k + i = j + i - k\"\n  for i j k :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/combine_options_left_commute",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma combine_options_left_commute:\n  \"(\\<And>x y. f x y = f y x) \\<Longrightarrow> (\\<And>x y z. f (f x y) z = f x (f y z)) \\<Longrightarrow> \n     combine_options f y (combine_options f x z) =\n     combine_options f x (combine_options f y z)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/ord_le_eq_subst",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma ord_le_eq_subst: \"a <= b \\<Longrightarrow> f b = c \\<Longrightarrow>\n  (!!x y. x <= y \\<Longrightarrow> f x <= f y) \\<Longrightarrow> f a <= c\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "lib/Parity/odd_pos",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma odd_pos:\n  \"odd n \\<Longrightarrow> 0 < n\" for n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/power2_gt_1_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power2_gt_1_iff: \"x\\<^sup>2 > 1 \\<longleftrightarrow> x < (-1 :: 'a :: linordered_idom) \\<or> x > 1\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/mem_Times_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma mem_Times_iff: \"x \\<in> A \\<times> B \\<longleftrightarrow> fst x \\<in> A \\<and> snd x \\<in> B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/sym_Un_converse",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sym_Un_converse: \"sym (r \\<union> r\\<inverse>)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/bex1_def",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bex1_def: \"(\\<exists>!x\\<in>X. P x) \\<longleftrightarrow> (\\<exists>x\\<in>X. P x) \\<and> (\\<forall>x\\<in>X. \\<forall>y\\<in>X. P x \\<longrightarrow> P y \\<longrightarrow> x = y)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/trancl_incr",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma trancl_incr: \"r \\<subseteq> r\\<^sup>+\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/less_than_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma less_than_iff: \"((x,y) \\<in> less_than) = (x<y)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/someI2",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma someI2: \"P a \\<Longrightarrow> (\\<And>x. P x \\<Longrightarrow> Q x) \\<Longrightarrow> Q (SOME x. P x)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/nth_equal_first_eq",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma nth_equal_first_eq:\n  assumes \"x \\<notin> set xs\"\n  assumes \"n \\<le> length xs\"\n  shows \"(x # xs) ! n = x \\<longleftrightarrow> n = 0\" (is \"?lhs \\<longleftrightarrow> ?rhs\")",
+      "orig_proof_lines": 14
+    },
+    {
+      "id": "lib/Map/map_le_upd",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma map_le_upd: \"f \\<subseteq>\\<^sub>m g ==> f(a := b) \\<subseteq>\\<^sub>m g(a := b)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/le_less_Suc_eq",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma le_less_Suc_eq: \"m \\<le> n \\<Longrightarrow> n < Suc m \\<longleftrightarrow> n = m\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/map_option_eq_Some",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma map_option_eq_Some: \"(map_option f xo = Some y) = (\\<exists>z. xo = Some z \\<and> f z = y)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/order_le_less_subst2",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma order_le_less_subst2: \"(a::'a::order) <= b \\<Longrightarrow> f b < (c::'c::order) \\<Longrightarrow>\n  (!!x y. x <= y \\<Longrightarrow> f x <= f y) \\<Longrightarrow> f a < c\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "lib/Parity/mod_double_nat",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma mod_double_nat:\n  \\<open>n mod (2 * m) = n mod m \\<or> n mod (2 * m) = n mod m + m\\<close>\n  for m n :: nat",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Power/power_add_numeral2",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma power_add_numeral2: \"a^numeral m * (a^numeral n * b) = a^numeral (m + n) * b\"\n  for a :: \"'a::monoid_mult\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/prod_cases",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma prod_cases: \"(\\<And>a b. P (Pair a b)) \\<Longrightarrow> P p\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/range_constant",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma range_constant: \"range (\\<lambda>_. x) = {x}\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/sym_rtrancl",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma sym_rtrancl: \"sym r \\<Longrightarrow> sym (r\\<^sup>*)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wf_subset",
+      "stratum": "lib",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma wf_subset: \"wf r \\<Longrightarrow> p \\<subseteq> r \\<Longrightarrow> wf p\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/gbinomial_reduce_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma gbinomial_reduce_nat: \"0 < k \\<Longrightarrow> a gchoose k = (a-1 gchoose k-1) + (a-1 gchoose k)\"\n  for a :: \"'a::field_char_0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Finite_Set/infinite_UNIV_char_0",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma infinite_UNIV_char_0: \"infinite (UNIV :: 'a::semiring_char_0 set)\"",
+      "orig_proof_lines": 11
+    },
+    {
+      "id": "lib/Fun/monotone_on_empty",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma monotone_on_empty: \"monotone_on {} orda ordb f\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/lcm_cases_int",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma lcm_cases_int:\n  fixes x y :: int\n  assumes \"x \\<ge> 0 \\<Longrightarrow> y \\<ge> 0 \\<Longrightarrow> P (lcm x y)\"\n    and \"x \\<ge> 0 \\<Longrightarrow> y \\<le> 0 \\<Longrightarrow> P (lcm x (- y))\"\n    and \"x \\<le> 0 \\<Longrightarrow> y \\<ge> 0 \\<Longrightarrow> P (lcm (- x) y)\"\n    and \"x \\<le> 0 \\<Longrightarrow> y \\<le> 0 \\<Longrightarrow> P (lcm (- x) (- y))\"\n  shows \"P (lcm x y)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/sum_bounded_above_strict",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_bounded_above_strict:\n  fixes K :: \"'a::{ordered_cancel_comm_monoid_add,semiring_1}\"\n  assumes \"\\<And>i. i\\<in>A \\<Longrightarrow> f i < K\" \"card A > 0\"\n  shows \"sum f A < of_nat (card A) * K\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Hilbert_Choice/inj_on_inv_into",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inj_on_inv_into: \"B \\<subseteq> f`A \\<Longrightarrow> inj_on (inv_into A f) B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/numeral_power_le_nat_cancel_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma numeral_power_le_nat_cancel_iff:\n  \"numeral x ^ n \\<le> nat a \\<longleftrightarrow> numeral x ^ n \\<le> a\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/List/Cons_lenlex_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Cons_lenlex_iff:\n  \"((m # ms, n # ns) \\<in> lenlex r) \\<longleftrightarrow>\n    length ms < length ns\n  \\<or> length ms = length ns \\<and> (m,n) \\<in> r\n  \\<or> (m = n \\<and> (ms,ns) \\<in> lenlex r)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Map/map_le_implies_dom_le",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_le_implies_dom_le: \"(f \\<subseteq>\\<^sub>m g) \\<Longrightarrow> (dom f \\<subseteq> dom g)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/nat_mult_eq_1_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma nat_mult_eq_1_iff: \"m * n = 1 \\<longleftrightarrow> m = 1 \\<and> n = 1\" \n  and nat_1_eq_mult_iff [simp]: \"1 = m * n \\<longleftrightarrow> m = 1 \\<and> n = 1\" for m n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/set_empty_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma set_empty_eq: \"(set_option xo = {}) = (xo = None)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/euclidean_size_int_less_eq_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma euclidean_size_int_less_eq_iff:\n  \\<open>euclidean_size k \\<le> euclidean_size l \\<longleftrightarrow> \\<bar>k\\<bar> \\<le> \\<bar>l\\<bar>\\<close> for k l :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/power_mult_numeral",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power_mult_numeral: \"(a^numeral m)^numeral n = a^numeral (m * n)\"\n  for a :: \"'a::monoid_mult\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/map_prod_imageI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_prod_imageI: \"(a, b) \\<in> R \\<Longrightarrow> (f a, g b) \\<in> map_prod f g ` R\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/disjnt_empty1",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma disjnt_empty1: \"disjnt {} A\" and disjnt_empty2 [simp]: \"disjnt A {}\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/relpowp_Suc_0",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma relpowp_Suc_0: \"P ^^ (Suc 0) = P\"\n  for P :: \"'a \\<Rightarrow> 'a \\<Rightarrow> bool\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wfp_on_iff_ex_minimal",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wfp_on_iff_ex_minimal: \"wfp_on A R \\<longleftrightarrow> (\\<forall>B \\<subseteq> A. B \\<noteq> {} \\<longrightarrow> (\\<exists>z \\<in> B. \\<forall>y. R y z \\<longrightarrow> y \\<notin> B))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/zero_less_binomial_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma zero_less_binomial_iff: \"n choose k > 0 \\<longleftrightarrow> k \\<le> n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Finite_Set/card_Diff_insert",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma card_Diff_insert:\n  assumes \"a \\<in> A\" and \"a \\<notin> B\"\n  shows \"card (A - insert a B) = card (A - B) - 1\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "lib/Fun/comp_id",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma comp_id: \"f \\<circ> id = f\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/lcm_proj1_if_dvd_int",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma lcm_proj1_if_dvd_int: \"x dvd y \\<Longrightarrow> lcm y x = \\<bar>y\\<bar>\"\n  for x y :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/sum_negf",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_negf: \"(\\<Sum>x\\<in>A. - f x) = - (\\<Sum>x\\<in>A. f x)\"\n  for f :: \"'b \\<Rightarrow> 'a::ab_group_add\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/some_equality",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma some_equality: \"P a \\<Longrightarrow> (\\<And>x. P x \\<Longrightarrow> x = a) \\<Longrightarrow> (SOME x. P x) = a\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/of_int_eq_numeral_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma of_int_eq_numeral_iff: \"of_int z = (numeral n :: 'a::ring_char_0) \\<longleftrightarrow> z = numeral n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/take_rev",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma take_rev: \"take n (rev xs) = rev (drop (length xs - n) xs)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Map/restrict_map_insert",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma restrict_map_insert: \"f |` (insert a A) = (f |` A)(a := f a)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/less_diff_conv",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma less_diff_conv: \"i < j - k \\<longleftrightarrow> i + k < j\"\n  for i j k :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/combine_options_assoc",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma combine_options_assoc:\n  \"(\\<And>x y z. f (f x y) z = f x (f y z)) \\<Longrightarrow> \n     combine_options f (combine_options f x y) z =\n     combine_options f x (combine_options f y z)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/ordering_dualI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma ordering_dualI:\n  fixes less_eq (infix \\<open>\\<^bold>\\<le>\\<close> 50)\n    and less (infix \\<open>\\<^bold><\\<close> 50)\n  assumes \\<open>ordering (\\<lambda>a b. b \\<^bold>\\<le> a) (\\<lambda>a b. b \\<^bold>< a)\\<close>\n  shows \\<open>ordering (\\<^bold>\\<le>) (\\<^bold><)\\<close>",
+      "orig_proof_lines": 5
+    },
+    {
+      "id": "lib/Parity/minus_1_mod_2_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma minus_1_mod_2_eq:\n  \\<open>- 1 mod 2 = (1::int)\\<close>",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/ex_power_ivl1",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma ex_power_ivl1: fixes b k :: nat assumes \"b \\<ge> 2\"\nshows \"k \\<ge> 1 \\<Longrightarrow> \\<exists>n. b^n \\<le> k \\<and> k < b^(n+1)\" (is \"_ \\<Longrightarrow> \\<exists>n. ?P k n\")",
+      "orig_proof_lines": 25
+    },
+    {
+      "id": "lib/Product_Type/case_prod_eta",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma case_prod_eta: \"(\\<lambda>(x, y). f (x, y)) = f\"\n  \\<comment> \\<open>Subsumes the old \\<open>split_Pair\\<close> when \\<^term>\\<open>f\\<close> is the identity function.\\<close>",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/trans_inv_image",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma trans_inv_image: \"trans r \\<Longrightarrow> trans (inv_image r f)\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Set/empty_Collect_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma empty_Collect_eq: \"{} = Collect P \\<longleftrightarrow> (\\<forall>x. \\<not> P x)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/relpowp_right_unique",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma relpowp_right_unique:\n  fixes R :: \"'a \\<Rightarrow> 'a \\<Rightarrow> bool\" and n :: nat and x y z :: 'a\n  assumes runique: \"\\<And>x y z. R x y \\<Longrightarrow> R x z \\<Longrightarrow> y = z\"\n  shows \"(R ^^ n) x y \\<Longrightarrow> (R ^^ n) x z \\<Longrightarrow> y = z\"",
+      "orig_proof_lines": 12
+    },
+    {
+      "id": "lib/Wellfounded/wf_asym",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wf_asym:\n  assumes \"wf r\" \"(a, x) \\<in> r\"\n  obtains \"(x, a) \\<notin> r\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/image_inv_f_f",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma image_inv_f_f: \"inj f \\<Longrightarrow> inv f ` (f ` A) = A\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/int_le_induct",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "theorem int_le_induct:\n  fixes i k :: int\n  assumes le: \"i \\<le> k\"\n    and base: \"P k\"\n    and step: \"\\<And>i. i \\<le> k \\<Longrightarrow> P i \\<Longrightarrow> P (i - 1)\"\n  shows \"P i\"",
+      "orig_proof_lines": 15
+    },
+    {
+      "id": "lib/List/take_map",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma take_map: \"take n (map f xs) = map f (take n xs)\"",
+      "orig_proof_lines": 7
+    },
+    {
+      "id": "lib/Map/fun_upds_append_drop",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma fun_upds_append_drop:\n  \"size xs = size ys \\<Longrightarrow> m(xs@zs[\\<mapsto>]ys) = m(xs[\\<mapsto>]ys)\"",
+      "orig_proof_lines": 5
+    },
+    {
+      "id": "lib/Nat/le_cube",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma le_cube: \"m \\<le> m * (m * m)\"\n  for m :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/combine_options_commute",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma combine_options_commute: \n  \"(\\<And>x y. f x y = f y x) \\<Longrightarrow> combine_options f x y = combine_options f y x\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Orderings/ordering_strictI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma ordering_strictI: \\<comment> \\<open>Alternative introduction rule with bias towards strict order\\<close>\n  fixes less_eq (infix \\<open>\\<^bold>\\<le>\\<close> 50)\n    and less (infix \\<open>\\<^bold><\\<close> 50)\n  assumes less_eq_less: \\<open>\\<And>a b. a \\<^bold>\\<le> b \\<longleftrightarrow> a \\<^bold>< b \\<or> a = b\\<close>\n    assumes asym: \\<open>\\<And>a b. a \\<^bold>< b \\<Longrightarrow> \\<not> b \\<^bold>< a\\<close>\n  assumes irrefl: \\<open>\\<And>a. \\<not> a \\<^bold>< a\\<close>\n  assumes trans: \\<open>\\<And>a b c. a \\<^bold>< b \\<Longrightarrow> b \\<^bold>< c \\<Longrightarrow> a \\<^bold>< c\\<close>\n  shows \\<open>ordering (\\<^bold>\\<le>) (\\<^bold><)\\<close>",
+      "orig_proof_lines": 17
+    },
+    {
+      "id": "lib/Parity/Suc_0_mod_numeral",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Suc_0_mod_numeral:\n  \\<open>Suc 0 mod numeral Num.One = 0\\<close>\n  \\<open>Suc 0 mod numeral (Num.Bit0 n) = 1\\<close>\n  \\<open>Suc 0 mod numeral (Num.Bit1 n) = 1\\<close>",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/power_add_numeral",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power_add_numeral: \"a^numeral m * a^numeral n = a^numeral (m + n)\"\n  for a :: \"'a::monoid_mult\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/subset_fst_snd",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma subset_fst_snd: \"A \\<subseteq> (fst ` A \\<times> snd ` A)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/Field_converse",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Field_converse: \"Field (r\\<inverse>) = Field r\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/insert_subset",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma insert_subset: \"insert x A \\<subseteq> B \\<longleftrightarrow> x \\<in> B \\<and> A \\<subseteq> B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/sym_trancl",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sym_trancl: \"sym r \\<Longrightarrow> sym (r\\<^sup>+)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wf_eq_minimal",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wf_eq_minimal: \"wf r \\<longleftrightarrow> (\\<forall>Q x. x \\<in> Q \\<longrightarrow> (\\<exists>z\\<in>Q. \\<forall>y. (y, z) \\<in> r \\<longrightarrow> y \\<notin> Q))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/card_subsets_step",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma card_subsets_step:\n  assumes \"finite S\" \"x \\<notin> S\" \"U \\<subseteq> S\"\n  shows \"card {T. T \\<subseteq> (insert x S) \\<and> U \\<subseteq> T \\<and> odd(card T)} \n       = card {T. T \\<subseteq> S \\<and> U \\<subseteq> T \\<and> odd(card T)} + card {T. T \\<subseteq> S \\<and> U \\<subseteq> T \\<and> even(card T)} \\<and>\n         card {T. T \\<subseteq> (insert x S) \\<and> U \\<subseteq> T \\<and> even(card T)} \n       = card {T. T \\<subseteq> S \\<and> U \\<subseteq> T \\<and> even(card T)} + card {T. T \\<subseteq> S \\<and> U \\<subseteq> T \\<and> odd(card T)}\"",
+      "orig_proof_lines": 22
+    },
+    {
+      "id": "lib/Finite_Set/Fpow_mono",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Fpow_mono: \"A \\<subseteq> B \\<Longrightarrow> Fpow A \\<subseteq> Fpow B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/mono_on_ident",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma mono_on_ident: \"mono_on S (\\<lambda>x. x)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/coprime_diff_one_left_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma coprime_diff_one_left_nat:\n  \"coprime (n - 1) n\" if \"n > 0\" for n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/card_SigmaI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma card_SigmaI:\n  \"finite A \\<Longrightarrow> \\<forall>a\\<in>A. finite (B a) \\<Longrightarrow> card (SIGMA x: A. B x) = (\\<Sum>a\\<in>A. card (B a))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Hilbert_Choice/dependent_nat_choice",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma dependent_nat_choice:\n  assumes 1: \"\\<exists>x. P 0 x\"\n    and 2: \"\\<And>x n. P n x \\<Longrightarrow> \\<exists>y. P (Suc n) y \\<and> Q n x y\"\n  shows \"\\<exists>f. \\<forall>n. P n (f n) \\<and> Q n (f n) (f (Suc n))\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "lib/Int/pos_int_cases",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma pos_int_cases:\n  assumes \"0 < k\"\n  obtains n where \"k = int n\" and \"n > 0\"",
+      "orig_proof_lines": 10
+    },
+    {
+      "id": "lib/List/distinct_zipI2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma distinct_zipI2:\n  assumes \"distinct ys\"\n  shows \"distinct (zip xs ys)\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "lib/Map/dom_minus",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma dom_minus:\n  \"f x = None \\<Longrightarrow> dom f - insert x A = dom f - A\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/add_leE",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma add_leE: \"m + k \\<le> n \\<Longrightarrow> (m \\<le> n \\<Longrightarrow> k \\<le> n \\<Longrightarrow> R) \\<Longrightarrow> R\"\n  for k m n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/rel_option_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma rel_option_iff:\n  \"rel_option R x y = (case (x, y) of (None, None) \\<Rightarrow> True\n    | (Some x, Some y) \\<Rightarrow> R x y\n    | _ \\<Rightarrow> False)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/le_boolD",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma le_boolD: \"P \\<le> Q \\<Longrightarrow> P \\<longrightarrow> Q\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/even_Suc_Suc_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma even_Suc_Suc_iff:\n  \"even (Suc (Suc n)) \\<longleftrightarrow> even n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/diff_le_diff_pow",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma diff_le_diff_pow:\n  assumes \"k \\<ge> 2\" shows \"m - n \\<le> k ^ m - k ^ n\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "lib/Set/disjnt_Un1",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma disjnt_Un1: \"disjnt (A \\<union> B) C \\<longleftrightarrow> disjnt A C \\<and> disjnt B C\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/r_r_into_trancl",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma r_r_into_trancl: \"(a, b) \\<in> R \\<Longrightarrow> (b, c) \\<in> R \\<Longrightarrow> (a, c) \\<in> R\\<^sup>+\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/sym_on_lex_prod",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sym_on_lex_prod:\n  \"sym_on A r\\<^sub>A \\<Longrightarrow> sym_on B r\\<^sub>B \\<Longrightarrow> sym_on (A \\<times> B) (r\\<^sub>A <*lex*> r\\<^sub>B)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/gbinomial_negated_upper",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma gbinomial_negated_upper: \"(a gchoose k) = (-1) ^ k * ((of_nat k - a - 1) gchoose k)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Finite_Set/insert_relcomp_fold",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma insert_relcomp_fold:\n  assumes \"finite S\"\n  shows \"Set.insert x R O S =\n    Finite_Set.fold (\\<lambda>(w,z) A'. if snd x = w then Set.insert (fst x,z) A' else A') (R O S) S\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "lib/Fun/surj_id",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma surj_id: \"surj id\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/coprime_Suc_right_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma coprime_Suc_right_nat:\n  \"coprime n (Suc n)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/sum_diff_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_diff_nat:\n  fixes f :: \"'a \\<Rightarrow> nat\"\n  assumes \"finite B\" and \"B \\<subseteq> A\"\n  shows \"sum f (A - B) = sum f A - sum f B\"",
+      "orig_proof_lines": 23
+    },
+    {
+      "id": "lib/Hilbert_Choice/some_eq_trivial",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma some_eq_trivial: \"(SOME y. y = x) = x\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/Ints_prod",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Ints_prod: \"(\\<And>x. x \\<in> A \\<Longrightarrow> f x \\<in> \\<int>) \\<Longrightarrow> prod f A \\<in> \\<int>\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/sorted_wrt_append",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sorted_wrt_append:\n  \"sorted_wrt P (xs @ ys) \\<longleftrightarrow>\n  sorted_wrt P xs \\<and> sorted_wrt P ys \\<and> (\\<forall>x\\<in>set xs. \\<forall>y\\<in>set ys. P x y)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/Suc_eq_plus1_left",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Suc_eq_plus1_left: \"Suc n = 1 + n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/rel_option_None2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma rel_option_None2: \"rel_option P x None \\<longleftrightarrow> x = None\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/preordering_dualI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma preordering_dualI:\n  fixes less_eq (infix \\<open>\\<^bold>\\<le>\\<close> 50)\n    and less (infix \\<open>\\<^bold><\\<close> 50)\n  assumes \\<open>preordering (\\<lambda>a b. b \\<^bold>\\<le> a) (\\<lambda>a b. b \\<^bold>< a)\\<close>\n  shows \\<open>preordering (\\<^bold>\\<le>) (\\<^bold><)\\<close>",
+      "orig_proof_lines": 5
+    },
+    {
+      "id": "lib/Parity/odd_Suc_div_two",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma odd_Suc_div_two:\n  \"odd n \\<Longrightarrow> Suc n div 2 = Suc (n div 2)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/card_UNIV_bool",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma card_UNIV_bool: \"card (UNIV :: bool set) = 2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/case_prod_beta'",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma case_prod_beta': \"(\\<lambda>(x,y). f x y) = (\\<lambda>x. f (fst x) (snd x))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/refl_on_INTER",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma refl_on_INTER: \"\\<forall>x\\<in>S. refl_on (A x) (r x) \\<Longrightarrow> refl_on (\\<Inter>(A ` S)) (\\<Inter>(r ` S))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/image_mono",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma image_mono: \"A \\<subseteq> B \\<Longrightarrow> f ` A \\<subseteq> f ` B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/relpow_Suc_I2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma relpow_Suc_I2: \"(x, y) \\<in> R \\<Longrightarrow> (y, z) \\<in> R ^^ n \\<Longrightarrow> (x, z) \\<in> R ^^ Suc n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wfp_def",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wfp_def: \"wfp r \\<longleftrightarrow> wf {(x, y). r x y}\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/gbinomial_absorption",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma gbinomial_absorption: \"of_nat (Suc k) * (a gchoose Suc k) = a * ((a - 1) gchoose k)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/image_id",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma image_id: \"image id = id\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/lcm_proj2_iff_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma lcm_proj2_iff_nat: \"lcm m n = n \\<longleftrightarrow> m dvd n\"\n  for m n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/prod_add",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma prod_add:\n  fixes f1 f2 :: \"'a \\<Rightarrow> 'c :: comm_semiring_1\"\n  assumes finite: \"finite A\"\n  shows   \"(\\<Prod>x\\<in>A. f1 x + f2 x) = (\\<Sum>X\\<in>Pow A. (\\<Prod>x\\<in>X. f1 x) * (\\<Prod>x\\<in>A-X. f2 x))\"",
+      "orig_proof_lines": 35
+    },
+    {
+      "id": "lib/Hilbert_Choice/bij_imp_bij_inv",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bij_imp_bij_inv: \"bij f \\<Longrightarrow> bij (inv f)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/of_int_less_numeral_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma of_int_less_numeral_iff:\n  \"of_int z < (numeral n :: 'a::linordered_idom) \\<longleftrightarrow> z < numeral n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/length_removeAll_less_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma length_removeAll_less_eq:\n  \"length (removeAll x xs) \\<le> length xs\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/lfp_funpow",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma lfp_funpow:\n  assumes f: \"mono f\"\n  shows \"lfp (f ^^ Suc n) = lfp f\"",
+      "orig_proof_lines": 13
+    },
+    {
+      "id": "lib/Option/not_Some_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma not_Some_eq: \"(\\<forall>y. x \\<noteq> Some y) \\<longleftrightarrow> x = None\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/even_abs_add_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma even_abs_add_iff:\n  \"even (\\<bar>k\\<bar> + l) \\<longleftrightarrow> even (k + l)\" for k l :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/power2_nat_le_eq_le",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma power2_nat_le_eq_le: \"m\\<^sup>2 \\<le> n\\<^sup>2 \\<longleftrightarrow> m \\<le> n\"\n  for m n :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Product_Type/swap_simp",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma swap_simp: \"prod.swap (x, y) = (y, x)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/sym_UNION",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sym_UNION: \"\\<forall>x\\<in>S. sym (r x) \\<Longrightarrow> sym (\\<Union>(r ` S))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/in_image_insert_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma in_image_insert_iff:\n  assumes \"\\<And>C. C \\<in> B \\<Longrightarrow> x \\<notin> C\"\n  shows \"A \\<in> insert x ` B \\<longleftrightarrow> x \\<in> A \\<and> A - {x} \\<in> B\" (is \"?P \\<longleftrightarrow> ?Q\")",
+      "orig_proof_lines": 14
+    },
+    {
+      "id": "lib/Transitive_Closure/relpow_empty",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma relpow_empty: \"0 < n \\<Longrightarrow> ({} :: ('a \\<times> 'a) set) ^^ n = {}\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/wf_on_induct",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma wf_on_induct:\n  assumes \"wf_on A r\" and \"x \\<in> A\" and \"\\<And>x. x \\<in> A \\<Longrightarrow> (\\<And>y. y \\<in> A \\<Longrightarrow> (y, x) \\<in> r \\<Longrightarrow> P y) \\<Longrightarrow> P x\"\n  shows \"P x\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/gbinomial_Suc",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma gbinomial_Suc: \"a gchoose (Suc k) = prod (\\<lambda>i. a - of_nat i) {0..k} div fact (Suc k)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Finite_Set/finite_Collect_conjI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma finite_Collect_conjI:\n  \"finite {x. P x} \\<or> finite {x. Q x} \\<Longrightarrow> finite {x. P x \\<and> Q x}\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/inj_onCI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inj_onCI: \"(\\<And>x y. x \\<in> A \\<Longrightarrow> y \\<in> A \\<Longrightarrow> f x = f y \\<Longrightarrow> x \\<noteq> y \\<Longrightarrow> False) \\<Longrightarrow> inj_on f A\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/lcm_ge_0_int",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma lcm_ge_0_int: \"lcm x y \\<ge> 0\"\n  for x y :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/sum_abs",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_abs: \"\\<bar>sum f A\\<bar> \\<le> sum (\\<lambda>i. \\<bar>f i\\<bar>) A\"\n  for f :: \"'a \\<Rightarrow> 'b::ordered_ab_group_add_abs\"",
+      "orig_proof_lines": 10
+    },
+    {
+      "id": "lib/Hilbert_Choice/infinite_imp_bij_betw2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma infinite_imp_bij_betw2:\n  assumes \"\\<not> finite A\"\n  shows \"\\<exists>h. bij_betw h A (A \\<union> {a})\"",
+      "orig_proof_lines": 14
+    },
+    {
+      "id": "lib/Int/zmult_zless_mono2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma zmult_zless_mono2: \"i < j \\<Longrightarrow> 0 < k \\<Longrightarrow> k * i < k * j\"\n  for i j k :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/foldr_fold_remove1",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma foldr_fold_remove1: \"foldr remove1 = fold remove1\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/bij_betw_Suc",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bij_betw_Suc:\n  \"bij_betw Suc M N \\<longleftrightarrow> Suc ` M = N\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/map_option_case",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_option_case: \"map_option f y = (case y of None \\<Rightarrow> None | Some x \\<Rightarrow> Some (f x))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Orderings/xt4",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma xt4:\n assumes \"(a::'a::order) > f b\"\n    and \"(b::'b::order) \\<ge> c\"\n    and \"\\<And>x y. x \\<ge> y \\<Longrightarrow> f x \\<ge> f y\"\n  shows  \"a > f c\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/even_add_abs_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma even_add_abs_iff:\n  \"even (k + \\<bar>l\\<bar>) \\<longleftrightarrow> even (k + l)\" for k l :: int",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/self_le_ge2_pow",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma self_le_ge2_pow:\n  assumes \"k \\<ge> 2\" shows \"m \\<le> k ^ m\"",
+      "orig_proof_lines": 9
+    },
+    {
+      "id": "lib/Product_Type/fst_apsnd",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma fst_apsnd: \"fst (apsnd f x) = fst x\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/Image_singleton_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Image_singleton_iff: \"b \\<in> r``{a} \\<longleftrightarrow> (a, b) \\<in> r\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/CollectD",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma CollectD: \"a \\<in> {x. P x} \\<Longrightarrow> P a\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/antisymp_on_reflclp_if_asymp_on",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma antisymp_on_reflclp_if_asymp_on:\n  assumes \"asymp_on A R\"\n  shows \"antisymp_on A R\\<^sup>=\\<^sup>=\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Binomial/binomial_Suc_n",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma binomial_Suc_n: \"Suc n choose n = Suc n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Finite_Set/bij_betw_finite",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bij_betw_finite: \"bij_betw f A B \\<Longrightarrow> finite A \\<longleftrightarrow> finite B\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/inj_on_diff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inj_on_diff: \"inj_on f A \\<Longrightarrow> inj_on f (A - B)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/gcd_0_left_nat",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma gcd_0_left_nat: \"gcd 0 x = x\"\n  for x :: nat",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Groups_Big/sum_Un2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_Un2:\n  assumes \"finite (A \\<union> B)\"\n  shows \"sum f (A \\<union> B) = sum f (A - B) + sum f (B - A) + sum f (A \\<inter> B)\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "lib/Hilbert_Choice/surj_f_inv_f",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma surj_f_inv_f: \"surj f \\<Longrightarrow> f (inv f y) = y\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Int/diff_in_Ints_iff_left",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma diff_in_Ints_iff_left: \"x \\<in> \\<int> \\<Longrightarrow> x - y \\<in> \\<int> \\<longleftrightarrow> y \\<in> \\<int>\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/List/hd_in_set",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma hd_in_set: \"xs \\<noteq> [] \\<Longrightarrow> hd xs \\<in> set xs\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Map/dom_map_add",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma dom_map_add: \"dom (m ++ n) = dom n \\<union> dom m\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Nat/Suc_le_lessD",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Suc_le_lessD: \"Suc m \\<le> n \\<Longrightarrow> m < n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Option/map_option_idI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma map_option_idI: \"(\\<And>y. y \\<in> set_option x \\<Longrightarrow> f y = y) \\<Longrightarrow> map_option f x = x\"",
+      "orig_proof_lines": 4
+    },
+    {
+      "id": "lib/Orderings/xt9",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma xt9:\n assumes \"(a::'a::order) > b\"\n    and \"(f b::'b::order) > c\"\n    and \"\\<And>x y. x > y \\<Longrightarrow> f x > f y\"\n  shows  \"f a > c\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Parity/even_Suc",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma even_Suc: \"even (Suc n) \\<longleftrightarrow> odd n\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Power/nat_power_eq_Suc_0_iff",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma nat_power_eq_Suc_0_iff: \"x ^ m = Suc 0 \\<longleftrightarrow> m = 0 \\<or> x = Suc 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Relation/range_fst",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma range_fst: \"range fst = UNIV\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Set/vimage_singleton_eq",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma vimage_singleton_eq: \"a \\<in> f -` {b} \\<longleftrightarrow> f a = b\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Transitive_Closure/trancl_insert2",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma trancl_insert2:\n  \"(insert (a, b) r)\\<^sup>+ = r\\<^sup>+ \\<union> {(x, y). ((x, a) \\<in> r\\<^sup>+ \\<or> x = a) \\<and> ((b, y) \\<in> r\\<^sup>+ \\<or> y = b)}\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Wellfounded/asym_less_than",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma asym_less_than: \"asym less_than\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Binomial/gbinomial_absorption'",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma gbinomial_absorption': \"k > 0 \\<Longrightarrow> a gchoose k = (a / of_nat k) * (a - 1 gchoose (k - 1))\"",
+      "orig_proof_lines": 2
+    },
+    {
+      "id": "lib/Finite_Set/finite_range_imageI",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma finite_range_imageI: \"finite (range g) \\<Longrightarrow> finite (range (\\<lambda>x. f (g x)))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/Fun/bij_betw_disjoint_Un",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma bij_betw_disjoint_Un:\n  assumes \"bij_betw f A C\" and \"bij_betw g B D\" \n  and \"A \\<inter> B = {}\"\n  and \"C \\<inter> D = {}\"\n  shows \"bij_betw (\\<lambda>x. if x \\<in> A then f x else g x) (A \\<union> B) (C \\<union> D)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "lib/GCD/Euclid_induct",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma Euclid_induct:\n  fixes P :: \"nat \\<Rightarrow> nat \\<Rightarrow> bool\"\n  assumes c: \"\\<And>a b. P a b \\<longleftrightarrow> P b a\"\n    and z: \"\\<And>a. P a 0\"\n    and add: \"\\<And>a b. P a b \\<longrightarrow> P a (a + b)\"\n  shows \"P a b\"",
+      "orig_proof_lines": 39
+    },
+    {
+      "id": "lib/Groups_Big/sum_bounded_above",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma sum_bounded_above:\n  fixes K :: \"'a::{semiring_1,ordered_comm_monoid_add}\"\n  assumes le: \"\\<And>i. i\\<in>A \\<Longrightarrow> f i \\<le> K\"\n  shows \"sum f A \\<le> of_nat (card A) * K\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "lib/Hilbert_Choice/inv_def",
+      "stratum": "lib",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma inv_def: \"inv f = (\\<lambda>y. SOME x. f x = y)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Swarm/base",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma base:\n  fixes n :: nat\n  shows \"(\\<Sum>i<0. 2 * i + 1) = (0::nat)^2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/reduction",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma reduction:\n  fixes n a b :: nat\n  assumes denominator: \"0 < b\"\n  shows \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"",
+      "orig_proof_lines": 40
+    },
+    {
+      "id": "fresh/Sqrt4/root",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma root: \"sqrt (4::real) = 2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/examples/Sqrt2/fact_succ_ne_one",
+      "stratum": "fresh",
+      "imports": [
+        "Main"
+      ],
+      "statement": "lemma fact_succ_ne_one: \"fact n + 1 \\<noteq> (1 :: nat)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Swarm/next_sum",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma next_sum:\n  fixes n :: nat\n  shows \"\\<And>k::nat. (\\<Sum>i<Suc k. 2 * i + 1) = (\\<Sum>i<k. 2 * i + 1) + (2 * k + 1)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/denominator_nonzero",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_nonzero:\n  fixes n a b :: nat\n  assumes denominator: \"0 < b\"\n  shows \"b \\<noteq> 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Sqrt4/rational",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma rational: \"(2::real) \\<in> \\<rat>\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Swarm/next_square",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma next_square:\n  fixes n :: nat\n  shows \"\\<And>k::nat. k^2 + (2 * k + 1) = (Suc k)^2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/common_positive",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma common_positive:\n  fixes n a b :: nat\n  assumes denominator_nonzero: \"b \\<noteq> 0\"\n  shows \"0 < (gcd a b)\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "fresh/Swarm/induction_step",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma induction_step:\n  fixes n :: nat\n  assumes next_sum: \"\\<And>k::nat. (\\<Sum>i<Suc k. 2 * i + 1) = (\\<Sum>i<k. 2 * i + 1) + (2 * k + 1)\"\n    and next_square: \"\\<And>k::nat. k^2 + (2 * k + 1) = (Suc k)^2\"\n  shows \"\\<And>k::nat. (\\<Sum>i<k. 2 * i + 1) = k^2 \\<Longrightarrow> (\\<Sum>i<Suc k. 2 * i + 1) = (Suc k)^2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/not_both_zero",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma not_both_zero:\n  fixes n a b :: nat\n  assumes denominator_nonzero: \"b \\<noteq> 0\"\n  shows \"a \\<noteq> 0 \\<or> b \\<noteq> 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Swarm/all_n",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma all_n:\n  fixes n :: nat\n  assumes base: \"(\\<Sum>i<0. 2 * i + 1) = (0::nat)^2\"\n    and induction_step: \"\\<And>k::nat. (\\<Sum>i<k. 2 * i + 1) = k^2 \\<Longrightarrow> (\\<Sum>i<Suc k. 2 * i + 1) = (Suc k)^2\"\n  shows \"\\<And>k::nat. (\\<Sum>i<k. 2 * i + 1) = k^2\"",
+      "orig_proof_lines": 5
+    },
+    {
+      "id": "fresh/Cascade/numerator_rebuild",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma numerator_rebuild:\n  fixes n a b :: nat\n  shows \"a = (gcd a b) * (a div (gcd a b))\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "fresh/Swarm/result",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma result:\n  fixes n :: nat\n  assumes all_n: \"\\<And>k::nat. (\\<Sum>i<k. 2 * i + 1) = k^2\"\n  shows \"(\\<Sum>i<n. 2 * i + 1) = n^2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/numerator_divides",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma numerator_divides:\n  fixes n a b :: nat\n  shows \"(gcd a b) dvd a\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/numerator_cancel",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma numerator_cancel:\n  fixes n a b :: nat\n  assumes numerator_divides: \"(gcd a b) dvd a\"\n  shows \"(gcd a b) * (a div (gcd a b)) = a\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/denominator_rebuild",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_rebuild:\n  fixes n a b :: nat\n  shows \"b = (gcd a b) * (b div (gcd a b))\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "fresh/Cascade/denominator_divides",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_divides:\n  fixes n a b :: nat\n  shows \"(gcd a b) dvd b\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/denominator_cancel",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_cancel:\n  fixes n a b :: nat\n  assumes denominator_divides: \"(gcd a b) dvd b\"\n  shows \"(gcd a b) * (b div (gcd a b)) = b\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/reduced_coprime",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma reduced_coprime:\n  fixes n a b :: nat\n  assumes denominator_nonzero: \"b \\<noteq> 0\"\n  shows \"coprime (a div (gcd a b)) (b div (gcd a b))\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "fresh/Cascade/nonzero_pair",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma nonzero_pair:\n  fixes n a b :: nat\n  assumes denominator_nonzero: \"b \\<noteq> 0\"\n  shows \"a \\<noteq> 0 \\<or> b \\<noteq> 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/cancellation",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma cancellation:\n  fixes n a b :: nat\n  assumes nonzero_pair: \"a \\<noteq> 0 \\<or> b \\<noteq> 0\"\n  shows \"coprime (a div gcd a b) (b div gcd a b)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/reduced_square",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma reduced_square:\n  fixes n a b :: nat\n  assumes square: \"a^2 = n * b^2\"\n    and reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"(a div (gcd a b))^2 = n * (b div (gcd a b))^2\"",
+      "orig_proof_lines": 32
+    },
+    {
+      "id": "fresh/Cascade/common_nonzero",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma common_nonzero:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"(gcd a b) \\<noteq> 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/common_square_nonzero",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma common_square_nonzero:\n  fixes n a b :: nat\n  assumes common_nonzero: \"(gcd a b) \\<noteq> 0\"\n  shows \"(gcd a b)^2 \\<noteq> 0\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/numerator_expansion",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma numerator_expansion:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"a^2 = (gcd a b)^2 * (a div (gcd a b))^2\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "fresh/Cascade/numerator_factor",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma numerator_factor:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"a = (gcd a b) * (a div (gcd a b))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/numerator_power",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma numerator_power:\n  fixes n a b :: nat\n  shows \"((gcd a b) * (a div (gcd a b)))^2 = (gcd a b)^2 * (a div (gcd a b))^2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/denominator_expansion",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_expansion:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"b^2 = (gcd a b)^2 * (b div (gcd a b))^2\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "fresh/Cascade/denominator_factor",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_factor:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"b = (gcd a b) * (b div (gcd a b))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/denominator_power",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_power:\n  fixes n a b :: nat\n  shows \"((gcd a b) * (b div (gcd a b)))^2 = (gcd a b)^2 * (b div (gcd a b))^2\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/scaled_equality",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma scaled_equality:\n  fixes n a b :: nat\n  assumes square: \"a^2 = n * b^2\"\n    and numerator_expansion: \"a^2 = (gcd a b)^2 * (a div (gcd a b))^2\"\n    and denominator_expansion: \"b^2 = (gcd a b)^2 * (b div (gcd a b))^2\"\n  shows \"(gcd a b)^2 * (a div (gcd a b))^2 = n * ((gcd a b)^2 * (b div (gcd a b))^2)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/reorder",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma reorder:\n  fixes n a b :: nat\n  shows \"n * ((gcd a b)^2 * (b div (gcd a b))^2) = (gcd a b)^2 * (n * (b div (gcd a b))^2)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/cancellable",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma cancellable:\n  fixes n a b :: nat\n  assumes scaled_equality: \"(gcd a b)^2 * (a div (gcd a b))^2 = n * ((gcd a b)^2 * (b div (gcd a b))^2)\"\n    and reorder: \"n * ((gcd a b)^2 * (b div (gcd a b))^2) = (gcd a b)^2 * (n * (b div (gcd a b))^2)\"\n  shows \"(gcd a b)^2 * (a div (gcd a b))^2 = (gcd a b)^2 * (n * (b div (gcd a b))^2)\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/denominator_one",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_one:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n    and reduced_square: \"(a div (gcd a b))^2 = n * (b div (gcd a b))^2\"\n  shows \"(b div (gcd a b)) = 1\"",
+      "orig_proof_lines": 29
+    },
+    {
+      "id": "fresh/Cascade/coprime_squares",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma coprime_squares:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"coprime ((a div (gcd a b))^2) ((b div (gcd a b))^2)\"",
+      "orig_proof_lines": 8
+    },
+    {
+      "id": "fresh/Cascade/reduced_pair",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma reduced_pair:\n  fixes n a b :: nat\n  assumes reduction: \"0 < (gcd a b) \\<and> a = (gcd a b) * (a div (gcd a b)) \\<and> b = (gcd a b) * (b div (gcd a b)) \\<and> coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"coprime (a div (gcd a b)) (b div (gcd a b))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/square_left",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma square_left:\n  fixes n a b :: nat\n  assumes reduced_pair: \"coprime (a div (gcd a b)) (b div (gcd a b))\"\n  shows \"coprime ((a div (gcd a b))^2) (b div (gcd a b))\"",
+      "orig_proof_lines": 1
+    },
+    {
+      "id": "fresh/Cascade/denominator_dvd",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma denominator_dvd:\n  fixes n a b :: nat\n  assumes reduced_square: \"(a div (gcd a b))^2 = n * (b div (gcd a b))^2\"\n  shows \"(b div (gcd a b))^2 dvd (a div (gcd a b))^2\"",
+      "orig_proof_lines": 6
+    },
+    {
+      "id": "fresh/Cascade/divides_product",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma divides_product:\n  fixes n a b :: nat\n  shows \"(b div (gcd a b))^2 dvd n * (b div (gcd a b))^2\"",
+      "orig_proof_lines": 1
+    }
+  ],
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

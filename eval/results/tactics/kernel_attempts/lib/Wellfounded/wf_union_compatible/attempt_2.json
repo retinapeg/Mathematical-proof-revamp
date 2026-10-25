@@ -1,0 +1,69 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):\nFailed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):\ngoal (1 subgoal):\n 1. wf (R \\<union> S)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. wf (R ∪\n        S)\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.591763250005897,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):\ntheorem wf_union_compatible:\n \\<lbrakk>wf ?R; wf ?S; ?R O ?S \\<subseteq> ?R\\<rbrakk> \\<Longrightarrow> wf (?R \\<union> ?S)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):\n*** goal (1 subgoal):\n***  1. wf (R \\<union> S)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):\n*** goal (1 subgoal):\n***  1. wf (R ∪\n***         S)\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. wf (R \\<union> S)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. wf (R ∪"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "        S)"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_p8s75_bf/E_affe44b335.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.591763250005897,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "written": 0,
+  "completed": 290,
+  "planned": 290,
+  "usd_reserved_or_spent": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

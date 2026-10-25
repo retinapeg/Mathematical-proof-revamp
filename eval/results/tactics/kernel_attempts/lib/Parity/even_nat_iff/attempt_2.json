@@ -1,0 +1,84 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):\nFailed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):\ngoal (2 subgoals):\n 1. \\<lbrakk>0 \\<le> k; even (nat k)\\<rbrakk> \\<Longrightarrow> even k\n 2. \\<lbrakk>0 \\<le> k; even k\\<rbrakk> \\<Longrightarrow> even (nat k)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦0 ≤ k; even (nat k)⟧ ⟹ even k\n 2. ⟦0 ≤ k; even k⟧\n    ⟹ even\n        (nat k)\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.331553666997934,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):\ntheorem local.even_nat_iff: 0 \\<le> ?k \\<Longrightarrow> even (nat ?k) = even ?k\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):\n*** goal (2 subgoals):\n***  1. \\<lbrakk>0 \\<le> k; even (nat k)\\<rbrakk> \\<Longrightarrow> even k\n***  2. \\<lbrakk>0 \\<le> k; even k\\<rbrakk> \\<Longrightarrow> even (nat k)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):\n*** goal (2 subgoals):\n***  1. ⟦0 ≤ k; even (nat k)⟧ ⟹ even k\n***  2. ⟦0 ≤ k; even k⟧\n***     ⟹ even\n***         (nat k)\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (2 subgoals):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. \\<lbrakk>0 \\<le> k; even (nat k)\\<rbrakk> \\<Longrightarrow> even k"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 2. \\<lbrakk>0 \\<le> k; even k\\<rbrakk> \\<Longrightarrow> even (nat k)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. ⟦0 ≤ k; even (nat k)⟧ ⟹ even k"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 2. ⟦0 ≤ k; even k⟧"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    ⟹ even"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "        (nat k)"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_548ytiu2/E_11e49d3e3b.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.331553666997934,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

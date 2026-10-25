@@ -1,0 +1,89 @@
+{
+  "result": {
+    "proof_text": "by force",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):\nFailed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):\ngoal (1 subgoal):\n 1. \\<exists>d x y. d dvd a \\<and> d dvd b \\<and> a * x = b * y + d\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ∃d x y.\n       d dvd a ∧\n       d dvd b ∧\n       a * x =\n       b * y +\n       d\nAt command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 9.406957874991349,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):\ntheorem bezout_add_strong_nat:\n ?a \\<noteq> 0 \\<Longrightarrow> \\<exists>d x y. d dvd ?a \\<and> d dvd ?b \\<and> ?a * x = ?b * y + d\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):\n*** goal (1 subgoal):\n***  1. \\<exists>d x y. d dvd a \\<and> d dvd b \\<and> a * x = b * y + d\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):\n*** goal (1 subgoal):\n***  1. ∃d x y.\n***        d dvd a ∧\n***        d dvd b ∧\n***        a * x =\n***        b * y +\n***        d\n*** At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\"):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. \\<exists>d x y. d dvd a \\<and> d dvd b \\<and> a * x = b * y + d"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": " 1. ∃d x y."
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       d dvd a ∧"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       d dvd b ∧"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       a * x ="
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       b * y +"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "       d"
+        },
+        {
+          "line": 9,
+          "col": null,
+          "message": "At command \"by\" (line 9 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ixa8gr62/E_15ca2902e3.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 9.406957874991349,
+      "timed_out": false
+    }
+  },
+  "tactic": "by force",
+  "attempt": 5,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

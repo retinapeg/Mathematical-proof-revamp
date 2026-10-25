@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by simp",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):\nFailed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):\ngoal (1 subgoal):\n 1. (A \\<in> insert x ` B) = (x \\<in> A \\<and> A - {x} \\<in> B)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. (A ∈ insert x ` B) =\n    (x ∈ A ∧\n     A - {x}\n     ∈ B)\nAt command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.196076583000831,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):\ntheorem in_image_insert_iff:\n (\\<And>C. C \\<in> ?B \\<Longrightarrow> ?x \\<notin> C) \\<Longrightarrow>\n (?A \\<in> insert ?x ` ?B) = (?x \\<in> ?A \\<and> ?A - {?x} \\<in> ?B)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):\n*** Failed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):\n*** goal (1 subgoal):\n***  1. (A \\<in> insert x ` B) = (x \\<in> A \\<and> A - {x} \\<in> B)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):\n*** goal (1 subgoal):\n***  1. (A ∈ insert x ` B) =\n***     (x ∈ A ∧\n***      A - {x}\n***      ∈ B)\n*** At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "Failed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. (A \\<in> insert x ` B) = (x \\<in> A \\<and> A - {x} \\<in> B)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. (A ∈ insert x ` B) ="
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    (x ∈ A ∧"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "     A - {x}"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "     ∈ B)"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_qnvb7kh4/E_09959dd45c.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.196076583000831,
+      "timed_out": false
+    }
+  },
+  "tactic": "by simp",
+  "attempt": 1,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

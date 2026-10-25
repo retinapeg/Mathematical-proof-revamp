@@ -1,0 +1,84 @@
+{
+  "result": {
+    "proof_text": "by blast",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):\nFailed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):\ngoal (1 subgoal):\n 1. (gcd a b * (a div gcd a b))\\<^sup>2 = (gcd a b)\\<^sup>2 * (a div gcd a b)\\<^sup>2\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. (gcd a b * (a div gcd a b))⇧2 =\n    (gcd a b)⇧2 *\n    (a div\n     gcd a\n      b)⇧2\nAt command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.970618082996225,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):\n*** goal (1 subgoal):\n***  1. (gcd a b * (a div gcd a b))\\<^sup>2 = (gcd a b)\\<^sup>2 * (a div gcd a b)\\<^sup>2\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):\ntheorem numerator_power:\n (gcd ?a ?b * (?a div gcd ?a ?b))\\<^sup>2 = (gcd ?a ?b)\\<^sup>2 * (?a div gcd ?a ?b)\\<^sup>2\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):\n*** goal (1 subgoal):\n***  1. (gcd a b * (a div gcd a b))⇧2 =\n***     (gcd a b)⇧2 *\n***     (a div\n***      gcd a\n***       b)⇧2\n*** At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. (gcd a b * (a div gcd a b))\\<^sup>2 = (gcd a b)\\<^sup>2 * (a div gcd a b)\\<^sup>2"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. (gcd a b * (a div gcd a b))⇧2 ="
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    (gcd a b)⇧2 *"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    (a div"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "     gcd a"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "      b)⇧2"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_7lx__r1u/E_dc052c3b48.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.970618082996225,
+      "timed_out": false
+    }
+  },
+  "tactic": "by blast",
+  "attempt": 3,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

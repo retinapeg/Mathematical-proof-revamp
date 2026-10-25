@@ -1,0 +1,169 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):\nFailed to finish proof (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):\ngoal (7 subgoals):\n 1. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns; m \\<noteq> n\\<rbrakk>\n    \\<Longrightarrow> length ms = length ns\n 2. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns; m \\<noteq> n\\<rbrakk>\n    \\<Longrightarrow> (m, n) \\<in> r\n 3. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns;\n     (ms, ns) \\<notin> lenlex r\\<rbrakk>\n 4. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns;\n 5. length ms < length ns \\<Longrightarrow> (m # ms, n # ns) \\<in> lenlex r\n 6. \\<lbrakk>length ms = length ns; (m, n) \\<in> r\\<rbrakk> \\<Longrightarrow> (m # ms, n # ns) \\<in> lenlex r\n 7. \\<lbrakk>(ms, ns) \\<in> lenlex r; m = n\\<rbrakk> \\<Longrightarrow> (n # ms, n # ns) \\<in> lenlex r\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns; m ≠ n⟧\n    ⟹ length ms = length ns\n 2. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns; m ≠ n⟧\n    ⟹ (m, n) ∈ r\n 3. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns;\n     (ms, ns) ∉ lenlex r⟧\n 4. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns;\n 5. length ms < length ns ⟹ (m # ms, n # ns) ∈ lenlex r\n 6. ⟦length ms = length ns; (m, n) ∈ r⟧ ⟹ (m # ms, n # ns) ∈ lenlex r\n 7. ⟦(ms, ns) ∈ lenlex r; m = n⟧\n    ⟹ (n # ms, n # ns)\n       ∈ lenlex\n          r\nAt command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.330010374993435,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):\ntheorem\n  local.Cons_lenlex_iff:\n    ((?m # ?ms, ?n # ?ns) \\<in> lenlex ?r) =\n    (length ?ms < length ?ns \\<or>\n     length ?ms = length ?ns \\<and> (?m, ?n) \\<in> ?r \\<or>\n     ?m = ?n \\<and> (?ms, ?ns) \\<in> lenlex ?r)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):\n*** Failed to finish proof (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):\n*** goal (7 subgoals):\n***  1. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns; m \\<noteq> n\\<rbrakk>\n***     \\<Longrightarrow> length ms = length ns\n***  2. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns; m \\<noteq> n\\<rbrakk>\n***     \\<Longrightarrow> (m, n) \\<in> r\n***  3. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns;\n***      (ms, ns) \\<notin> lenlex r\\<rbrakk>\n***     \\<Longrightarrow> length ms = length ns\n***  4. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns;\n***      (ms, ns) \\<notin> lenlex r\\<rbrakk>\n***     \\<Longrightarrow> (m, n) \\<in> r\n***  5. length ms < length ns \\<Longrightarrow> (m # ms, n # ns) \\<in> lenlex r\n***  6. \\<lbrakk>length ms = length ns; (m, n) \\<in> r\\<rbrakk> \\<Longrightarrow> (m # ms, n # ns) \\<in> lenlex r\n***  7. \\<lbrakk>(ms, ns) \\<in> lenlex r; m = n\\<rbrakk> \\<Longrightarrow> (n # ms, n # ns) \\<in> lenlex r\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):\n*** goal (7 subgoals):\n***  1. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns; m ≠ n⟧\n***     ⟹ length ms = length ns\n***  2. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns; m ≠ n⟧\n***     ⟹ (m, n) ∈ r\n***  3. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns;\n***      (ms, ns) ∉ lenlex r⟧\n***     ⟹ length ms = length ns\n***  4. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns;\n***      (ms, ns) ∉ lenlex r⟧\n***     ⟹ (m, n) ∈ r\n***  5. length ms < length ns ⟹ (m # ms, n # ns) ∈ lenlex r\n***  6. ⟦length ms = length ns; (m, n) ∈ r⟧ ⟹ (m # ms, n # ns) ∈ lenlex r\n***  7. ⟦(ms, ns) ∈ lenlex r; m = n⟧\n***     ⟹ (n # ms, n # ns)\n***        ∈ lenlex\n***           r\n*** At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "Failed to finish proof (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "goal (7 subgoals):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns; m \\<noteq> n\\<rbrakk>"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "    \\<Longrightarrow> length ms = length ns"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 2. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns; m \\<noteq> n\\<rbrakk>"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "    \\<Longrightarrow> (m, n) \\<in> r"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 3. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns;"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "     (ms, ns) \\<notin> lenlex r\\<rbrakk>"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 4. \\<lbrakk>(m # ms, n # ns) \\<in> lenlex r; \\<not> length ms < length ns;"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 5. length ms < length ns \\<Longrightarrow> (m # ms, n # ns) \\<in> lenlex r"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 6. \\<lbrakk>length ms = length ns; (m, n) \\<in> r\\<rbrakk> \\<Longrightarrow> (m # ms, n # ns) \\<in> lenlex r"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 7. \\<lbrakk>(ms, ns) \\<in> lenlex r; m = n\\<rbrakk> \\<Longrightarrow> (n # ms, n # ns) \\<in> lenlex r"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns; m ≠ n⟧"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "    ⟹ length ms = length ns"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 2. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns; m ≠ n⟧"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "    ⟹ (m, n) ∈ r"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 3. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns;"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "     (ms, ns) ∉ lenlex r⟧"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 4. ⟦(m # ms, n # ns) ∈ lenlex r; ¬ length ms < length ns;"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 5. length ms < length ns ⟹ (m # ms, n # ns) ∈ lenlex r"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 6. ⟦length ms = length ns; (m, n) ∈ r⟧ ⟹ (m # ms, n # ns) ∈ lenlex r"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 7. ⟦(ms, ns) ∈ lenlex r; m = n⟧"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "    ⟹ (n # ms, n # ns)"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "       ∈ lenlex"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "          r"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ohbusaje/E_124fbca4e5.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.330010374993435,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

@@ -1,0 +1,1 @@
+{"text": "<proof>using next_sum next_square by simp (* private_canary_4_8ae7 *)</proof>", "prompt_tokens": 0, "completion_tokens": 0, "model_id": "fake/held_out", "wall_s": 0, "raw_response": {"text": "<proof>using next_sum next_square by simp (* private_canary_4_8ae7 *)</proof>"}, "request": {}, "error": "", "usage_known": true}

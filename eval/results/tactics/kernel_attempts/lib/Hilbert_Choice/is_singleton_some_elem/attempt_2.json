@@ -1,0 +1,94 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):\nFailed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):\ngoal (3 subgoals):\n 1. \\<And>x. \\<lbrakk>is_singleton A; x \\<in> A\\<rbrakk> \\<Longrightarrow> x = some_elem A\n 2. is_singleton A \\<Longrightarrow> some_elem A \\<in> A\n 3. A = {some_elem A} \\<Longrightarrow> is_singleton A\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⋀x. ⟦is_singleton A; x ∈ A⟧ ⟹ x = some_elem A\n 2. is_singleton A ⟹ some_elem A ∈ A\n 3. A = {some_elem A} ⟹\n    is_singleton\n     A\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.632021500001429,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):\ntheorem\n  local.is_singleton_some_elem: is_singleton ?A = (?A = {some_elem ?A})\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):\n*** goal (3 subgoals):\n***  1. \\<And>x. \\<lbrakk>is_singleton A; x \\<in> A\\<rbrakk> \\<Longrightarrow> x = some_elem A\n***  2. is_singleton A \\<Longrightarrow> some_elem A \\<in> A\n***  3. A = {some_elem A} \\<Longrightarrow> is_singleton A\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):\n*** goal (3 subgoals):\n***  1. ⋀x. ⟦is_singleton A; x ∈ A⟧ ⟹ x = some_elem A\n***  2. is_singleton A ⟹ some_elem A ∈ A\n***  3. A = {some_elem A} ⟹\n***     is_singleton\n***      A\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to finish proof (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (3 subgoals):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. \\<And>x. \\<lbrakk>is_singleton A; x \\<in> A\\<rbrakk> \\<Longrightarrow> x = some_elem A"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 2. is_singleton A \\<Longrightarrow> some_elem A \\<in> A"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 3. A = {some_elem A} \\<Longrightarrow> is_singleton A"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. ⋀x. ⟦is_singleton A; x ∈ A⟧ ⟹ x = some_elem A"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 2. is_singleton A ⟹ some_elem A ∈ A"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 3. A = {some_elem A} ⟹"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    is_singleton"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     A"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_m247ptl8/E_4643aaaa95.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.632021500001429,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by fastforce",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):\ngoal (1 subgoal):\n 1. inj_on f (set xs) \\<Longrightarrow> distinct_adj (map f xs) = distinct_adj xs\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. inj_on f (set xs) ⟹\n    distinct_adj (map f xs) =\n    distinct_adj\n     xs\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.940022249997128,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):\n*** goal (1 subgoal):\n***  1. inj_on f (set xs) \\<Longrightarrow> distinct_adj (map f xs) = distinct_adj xs\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):\ntheorem\n  local.distinct_adj_map_iff:\n    inj_on ?f (set ?xs) \\<Longrightarrow> distinct_adj (map ?f ?xs) = distinct_adj ?xs\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):\n*** goal (1 subgoal):\n***  1. inj_on f (set xs) ⟹\n***     distinct_adj (map f xs) =\n***     distinct_adj\n***      xs\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. inj_on f (set xs) \\<Longrightarrow> distinct_adj (map f xs) = distinct_adj xs"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. inj_on f (set xs) ⟹"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    distinct_adj (map f xs) ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    distinct_adj"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     xs"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_31m06adp/E_e0924f69df.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.940022249997128,
+      "timed_out": false
+    }
+  },
+  "tactic": "by fastforce",
+  "attempt": 4,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

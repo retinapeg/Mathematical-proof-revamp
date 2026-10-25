@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):\nFailed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):\ngoal (1 subgoal):\n 1. n mod (2 * m) \\<noteq> n mod m + m \\<Longrightarrow> n mod (2 * m) = n mod m\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. n mod (2 * m) ≠ n mod m + m ⟹\n    n mod (2 * m) =\n    n mod\n    m\nAt command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.632389624995994,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):\ntheorem\n  local.mod_double_nat:\n    ?n mod (2 * ?m) = ?n mod ?m \\<or> ?n mod (2 * ?m) = ?n mod ?m + ?m\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):\n*** Failed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):\n*** goal (1 subgoal):\n***  1. n mod (2 * m) \\<noteq> n mod m + m \\<Longrightarrow> n mod (2 * m) = n mod m\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):\n*** goal (1 subgoal):\n***  1. n mod (2 * m) ≠ n mod m + m ⟹\n***     n mod (2 * m) =\n***     n mod\n***     m\n*** At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "Failed to finish proof (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. n mod (2 * m) \\<noteq> n mod m + m \\<Longrightarrow> n mod (2 * m) = n mod m"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. n mod (2 * m) ≠ n mod m + m ⟹"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    n mod (2 * m) ="
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    n mod"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    m"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_g21rjdzx/E_b6ac8bfe13.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.632389624995994,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

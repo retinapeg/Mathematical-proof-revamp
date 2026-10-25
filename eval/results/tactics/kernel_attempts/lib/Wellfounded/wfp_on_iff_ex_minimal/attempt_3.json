@@ -1,0 +1,23 @@
+{
+  "result": {
+    "proof_text": "by blast",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "timeout",
+    "error": "\nPROBE TIMEOUT\n",
+    "kernel_wall_s": 30.20554604199424,
+    "kernel": {
+      "exit_code": -9,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_9_qgmqxs/E_b0bb3395d3.thy\"):\ntheorem\n  local.wfp_on_iff_ex_minimal:\n    wfp_on ?A ?R = (\\<forall>B\\<subseteq>?A. B \\<noteq> {} \\<longrightarrow> (\\<exists>z\\<in>B. \\<forall>y. ?R y z \\<longrightarrow> y \\<notin> B))\n",
+      "stderr": "\nPROBE TIMEOUT\n",
+      "errors": [],
+      "wall_s": 30.20554604199424,
+      "timed_out": true
+    }
+  },
+  "tactic": "by blast",
+  "attempt": 3,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

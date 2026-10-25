@@ -1,0 +1,84 @@
+{
+  "result": {
+    "proof_text": "by blast",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):\nFailed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):\ngoal (1 subgoal):\n 1. (a div gcd a b)\\<^sup>2 = n * (b div gcd a b)\\<^sup>2\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. (a div gcd a b)⇧2 =\n    n *\n    (b div\n     gcd a\n      b)⇧2\nAt command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.755782959007774,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):\ntheorem reduced_square:\n \\<lbrakk>?a\\<^sup>2 = ?n * ?b\\<^sup>2;\n  0 < gcd ?a ?b \\<and>\n  ?a = gcd ?a ?b * (?a div gcd ?a ?b) \\<and>\n  ?b = gcd ?a ?b * (?b div gcd ?a ?b) \\<and>\n  coprime (?a div gcd ?a ?b) (?b div gcd ?a ?b)\\<rbrakk>\n \\<Longrightarrow> (?a div gcd ?a ?b)\\<^sup>2 = ?n * (?b div gcd ?a ?b)\\<^sup>2\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):\n*** Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):\n*** goal (1 subgoal):\n***  1. (a div gcd a b)\\<^sup>2 = n * (b div gcd a b)\\<^sup>2\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):\n*** goal (1 subgoal):\n***  1. (a div gcd a b)⇧2 =\n***     n *\n***     (b div\n***      gcd a\n***       b)⇧2\n*** At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. (a div gcd a b)\\<^sup>2 = n * (b div gcd a b)\\<^sup>2"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. (a div gcd a b)⇧2 ="
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "    n *"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "    (b div"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "     gcd a"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "      b)⇧2"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_xplb0yfb/E_15eaf4d10f.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.755782959007774,
+      "timed_out": false
+    }
+  },
+  "tactic": "by blast",
+  "attempt": 3,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

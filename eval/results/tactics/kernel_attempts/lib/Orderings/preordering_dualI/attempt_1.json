@@ -1,0 +1,69 @@
+{
+  "result": {
+    "proof_text": "by simp",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):\nFailed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):\ngoal (1 subgoal):\n 1. preordering (\\<^bold>\\<le>) (\\<^bold><)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. preordering (❙≤)\n     (❙<)\nAt command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.550099582993425,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):\ntheorem preordering_dualI:\n preordering (\\<lambda>a b. ?less_eq b a) (\\<lambda>a b. ?less b a) \\<Longrightarrow>\n preordering ?less_eq ?less\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):\n*** Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):\n*** goal (1 subgoal):\n***  1. preordering (\\<^bold>\\<le>) (\\<^bold><)\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):\n*** goal (1 subgoal):\n***  1. preordering (❙≤)\n***      (❙<)\n*** At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\"):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. preordering (\\<^bold>\\<le>) (\\<^bold><)"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": " 1. preordering (❙≤)"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "     (❙<)"
+        },
+        {
+          "line": 10,
+          "col": null,
+          "message": "At command \"by\" (line 10 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_dop6z77a/E_b90d03927f.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.550099582993425,
+      "timed_out": false
+    }
+  },
+  "tactic": "by simp",
+  "attempt": 1,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

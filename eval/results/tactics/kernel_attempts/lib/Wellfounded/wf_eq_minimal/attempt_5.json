@@ -1,0 +1,23 @@
+{
+  "result": {
+    "proof_text": "by force",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "timeout",
+    "error": "\nPROBE TIMEOUT\n",
+    "kernel_wall_s": 30.15795066699502,
+    "kernel": {
+      "exit_code": -9,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_fuv7pupk/E_da0d128720.thy\"):\ntheorem\n  local.wf_eq_minimal:\n    wf ?r = (\\<forall>Q x. x \\<in> Q \\<longrightarrow> (\\<exists>z\\<in>Q. \\<forall>y. (y, z) \\<in> ?r \\<longrightarrow> y \\<notin> Q))\n",
+      "stderr": "\nPROBE TIMEOUT\n",
+      "errors": [],
+      "wall_s": 30.15795066699502,
+      "timed_out": true
+    }
+  },
+  "tactic": "by force",
+  "attempt": 5,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by (simp add: algebra_simps)",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):\ngoal (1 subgoal):\n 1. finite r \\<Longrightarrow> wf r = acyclic r\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. finite r ⟹\n    wf r =\n    acyclic\n     r\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.822763584001223,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):\ntheorem local.wf_iff_acyclic_if_finite: finite ?r \\<Longrightarrow> wf ?r = acyclic ?r\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):\n*** goal (1 subgoal):\n***  1. finite r \\<Longrightarrow> wf r = acyclic r\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):\n*** goal (1 subgoal):\n***  1. finite r ⟹\n***     wf r =\n***     acyclic\n***      r\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. finite r \\<Longrightarrow> wf r = acyclic r"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. finite r ⟹"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    wf r ="
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    acyclic"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "     r"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_6ua9yx4_/E_a6806ce53c.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.822763584001223,
+      "timed_out": false
+    }
+  },
+  "tactic": "by (simp add: algebra_simps)",
+  "attempt": 8,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

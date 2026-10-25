@@ -1,0 +1,99 @@
+{
+  "result": {
+    "proof_text": "by auto",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):\nFailed to finish proof (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):\ngoal (3 subgoals):\n 1. \\<lbrakk>i \\<le> j; k \\<le> l\\<rbrakk> \\<Longrightarrow> i + k \\<le> j + l\n 2. \\<lbrakk>i = j; k \\<le> l\\<rbrakk> \\<Longrightarrow> j + k \\<le> j + l\n 3. \\<lbrakk>i \\<le> j; k = l\\<rbrakk> \\<Longrightarrow> i + l \\<le> j + l\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ⟦i ≤ j; k ≤ l⟧ ⟹ i + k ≤ j + l\n 2. ⟦i = j; k ≤ l⟧ ⟹ j + k ≤ j + l\n 3. ⟦i ≤ j; k = l⟧\n    ⟹ i + l\n       ≤ j +\n         l\nAt command \"by\" (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.886303332998068,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):\ntheorem add_mono_thms_linordered_semiring:\n (?i \\<le> ?j \\<and> ?k \\<le> ?l \\<Longrightarrow> ?i + ?k \\<le> ?j + ?l\n  and ?i = ?j \\<and> ?k \\<le> ?l \\<Longrightarrow> ?i + ?k \\<le> ?j + ?l\n  and ?i \\<le> ?j \\<and> ?k = ?l \\<Longrightarrow> ?i + ?k \\<le> ?j + ?l\n  and ?i = ?j \\<and> ?k = ?l \\<Longrightarrow> ?i + ?k = ?j + ?l)\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):\n*** Failed to finish proof (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):\n*** goal (3 subgoals):\n***  1. \\<lbrakk>i \\<le> j; k \\<le> l\\<rbrakk> \\<Longrightarrow> i + k \\<le> j + l\n***  2. \\<lbrakk>i = j; k \\<le> l\\<rbrakk> \\<Longrightarrow> j + k \\<le> j + l\n***  3. \\<lbrakk>i \\<le> j; k = l\\<rbrakk> \\<Longrightarrow> i + l \\<le> j + l\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to finish proof (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):\n*** goal (3 subgoals):\n***  1. ⟦i ≤ j; k ≤ l⟧ ⟹ i + k ≤ j + l\n***  2. ⟦i = j; k ≤ l⟧ ⟹ j + k ≤ j + l\n***  3. ⟦i ≤ j; k = l⟧\n***     ⟹ i + l\n***        ≤ j +\n***          l\n*** At command \"by\" (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "Failed to finish proof (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\"):"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "goal (3 subgoals):"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": " 1. \\<lbrakk>i \\<le> j; k \\<le> l\\<rbrakk> \\<Longrightarrow> i + k \\<le> j + l"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": " 2. \\<lbrakk>i = j; k \\<le> l\\<rbrakk> \\<Longrightarrow> j + k \\<le> j + l"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": " 3. \\<lbrakk>i \\<le> j; k = l\\<rbrakk> \\<Longrightarrow> i + l \\<le> j + l"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": " 1. ⟦i ≤ j; k ≤ l⟧ ⟹ i + k ≤ j + l"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": " 2. ⟦i = j; k ≤ l⟧ ⟹ j + k ≤ j + l"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": " 3. ⟦i ≤ j; k = l⟧"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "    ⟹ i + l"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "       ≤ j +"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "         l"
+        },
+        {
+          "line": 11,
+          "col": null,
+          "message": "At command \"by\" (line 11 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_l5wd9ljw/E_3cf7fc1de6.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.886303332998068,
+      "timed_out": false
+    }
+  },
+  "tactic": "by auto",
+  "attempt": 2,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

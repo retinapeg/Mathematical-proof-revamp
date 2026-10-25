@@ -1,0 +1,29 @@
+{
+  "config": {
+    "run_id": "full",
+    "corpus": [
+      "eval/corpus/fresh.jsonl"
+    ],
+    "lemma_ids": [
+      "fresh/Swarm/base"
+    ],
+    "conditions": [],
+    "workers": 1,
+    "kernel_timeout_s": 30,
+    "max_usd": 0,
+    "max_hours": 1
+  },
+  "tasks": [
+    {
+      "id": "fresh/Swarm/base",
+      "stratum": "fresh",
+      "imports": [
+        "Complex_Main"
+      ],
+      "statement": "lemma base:\n  fixes n :: nat\n  shows \"(\\<Sum>i<0. 2 * i + 1) = (0::nat)^2\"",
+      "orig_proof_lines": 1
+    }
+  ],
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}

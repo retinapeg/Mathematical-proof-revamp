@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by force",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):\nFailed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):\ngoal (1 subgoal):\n 1. card (A - insert a B) = card (A - B) - 1\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. card (A - insert a B) =\n    card (A - B) -\n    1\nAt command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 7.508944749992224,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):\ntheorem card_Diff_insert:\n \\<lbrakk>?a \\<in> ?A; ?a \\<notin> ?B\\<rbrakk> \\<Longrightarrow> card (?A - insert ?a ?B) = card (?A - ?B) - 1\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):\n*** goal (1 subgoal):\n***  1. card (A - insert a B) = card (A - B) - 1\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):\n*** goal (1 subgoal):\n***  1. card (A - insert a B) =\n***     card (A - B) -\n***     1\n*** At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. card (A - insert a B) = card (A - B) - 1"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. card (A - insert a B) ="
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    card (A - B) -"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    1"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ibronzt0/E_671d932cb3.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 7.508944749992224,
+      "timed_out": false
+    }
+  },
+  "tactic": "by force",
+  "attempt": 5,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

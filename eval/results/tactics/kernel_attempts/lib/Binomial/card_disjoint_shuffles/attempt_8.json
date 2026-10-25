@@ -1,0 +1,79 @@
+{
+  "result": {
+    "proof_text": "by (simp add: algebra_simps)",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):\nFailed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):\ngoal (1 subgoal):\n 1. card (shuffles xs ys) = length xs + length ys choose length xs\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. card (shuffles xs ys) =\n    length xs + length ys choose\n    length\n     xs\nAt command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.028907208004966,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):\ntheorem card_disjoint_shuffles:\n set ?xs \\<inter> set ?ys = {} \\<Longrightarrow>\n card (shuffles ?xs ?ys) = length ?xs + length ?ys choose length ?xs\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):\n*** goal (1 subgoal):\n***  1. card (shuffles xs ys) = length xs + length ys choose length xs\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):\n*** goal (1 subgoal):\n***  1. card (shuffles xs ys) =\n***     length xs + length ys choose\n***     length\n***      xs\n*** At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\"):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. card (shuffles xs ys) = length xs + length ys choose length xs"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": " 1. card (shuffles xs ys) ="
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    length xs + length ys choose"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "    length"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "     xs"
+        },
+        {
+          "line": 8,
+          "col": null,
+          "message": "At command \"by\" (line 8 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_d0nr516a/E_936ee0201a.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.028907208004966,
+      "timed_out": false
+    }
+  },
+  "tactic": "by (simp add: algebra_simps)",
+  "attempt": 8,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

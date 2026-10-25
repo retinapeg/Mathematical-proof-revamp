@@ -1,0 +1,74 @@
+{
+  "result": {
+    "proof_text": "by linarith",
+    "aux_lemmas": "",
+    "proved": false,
+    "failure_class": "method_failed",
+    "error": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):\nFailed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):\ngoal (1 subgoal):\n 1. \\<forall>x\\<in>S. sym (r x) \\<Longrightarrow> sym (\\<Union> (r ` S))\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n 1. ∀x∈S. sym (r x) ⟹\n    sym (⋃ (r `\n            S))\nAt command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\")\nUnfinished session(s): Draft",
+    "kernel_wall_s": 8.707733041999745,
+    "kernel": {
+      "exit_code": 1,
+      "stdout": "Running Draft ...\n\nOutput (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):\ntheorem local.sym_UNION: \\<forall>x\\<in>?S. sym (?r x) \\<Longrightarrow> sym (\\<Union> (?r ` ?S))\n\nError (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):\n*** goal (1 subgoal):\n***  1. \\<forall>x\\<in>S. sym (r x) \\<Longrightarrow> sym (\\<Union> (r ` S))\nDraft FAILED (see also \"isabelle build_log -H Error Draft\")\n*** Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):\n*** goal (1 subgoal):\n***  1. ∀x∈S. sym (r x) ⟹\n***     sym (⋃ (r `\n***             S))\n*** At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\")\nUnfinished session(s): Draft\n",
+      "stderr": "",
+      "errors": [
+        {
+          "line": 5,
+          "col": null,
+          "message": "Error (line 5 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "Failed to apply initial proof method (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\"):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "goal (1 subgoal):"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. \\<forall>x\\<in>S. sym (r x) \\<Longrightarrow> sym (\\<Union> (r ` S))"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Draft FAILED (see also \"isabelle build_log -H Error Draft\")"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": " 1. ∀x∈S. sym (r x) ⟹"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "    sym (⋃ (r `"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "            S))"
+        },
+        {
+          "line": 6,
+          "col": null,
+          "message": "At command \"by\" (line 6 of \"~/Mathematical-proof-revamp/eval/results/tactics/work/attempt_ne6wwrwg/E_96cd99f9e5.thy\")"
+        },
+        {
+          "line": null,
+          "col": null,
+          "message": "Unfinished session(s): Draft"
+        }
+      ],
+      "wall_s": 8.707733041999745,
+      "timed_out": false
+    }
+  },
+  "tactic": "by linarith",
+  "attempt": 6,
+  "usd_cost": 0,
+  "isabelle_version": "Isabelle2025-2",
+  "git_sha": "fb0d1409f224bd6000ef71fab834cf6751079b01"
+}

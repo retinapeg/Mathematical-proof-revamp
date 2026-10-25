@@ -1,0 +1,15 @@
+{
+  "result": {
+    "proved": true,
+    "proof_text": "by blast",
+    "aux_lemmas": "",
+    "failure_class": null,
+    "error": "",
+    "kernel_wall_s": 1
+  },
+  "tactic": "by blast",
+  "attempt": 3,
+  "usd_cost": 0,
+  "git_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "isabelle_version": "test-version"
+}
